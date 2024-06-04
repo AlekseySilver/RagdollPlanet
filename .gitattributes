@@ -1,7 +1,5 @@
-###############################################################################
-# Set default behavior to automatically normalize line endings.
-###############################################################################
-* text=auto
+# Normalize line endings for all files that Git considers text files.
+* text=auto eol=lf
 
 ###############################################################################
 # Set default behavior for command prompt diff.
