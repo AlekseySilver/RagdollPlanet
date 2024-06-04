@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://geometry/cylinder32.mesh" type="ArrayMesh" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.195129
+height = 9.66205
+
+[node name="grab_bar" type="StaticBody"]
+collision_layer = 16
+
+[node name="grab_bar_shape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="mesh" type="MeshInstance" parent="grab_bar_shape"]
+transform = Transform( 0.1, 0, 0, 0, -2.18557e-07, -0.1, 0, 5, -4.37114e-09, 0, 0, 0 )
+mesh = ExtResource( 1 )

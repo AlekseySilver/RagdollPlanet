@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=4]
+
+[node name="hills" type="Spatial"]
+
+[node name="loader" type="Node" parent="."]
+script = ExtResource( 4 )
+files = PoolStringArray( "res://scene/island/parts/ground_meadow/ground_meadow000.tscn", "res://scene/island/parts/ground_meadow/ground_meadow001.tscn", "res://scene/island/parts/ground_meadow/ground_meadow002.tscn", "res://scene/details/box.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/box.tscn", "res://scene/person/NPC/NPC_MJim.tscn" )
+positions = PoolVector3Array( 18.4306, -39.0652, -163.858, 356.246, -96.0972, -103.735, 413.286, -239.784, 405.503, -51.1523, -1.55316, 66.4529, 12.4641, 16.3602, -3.26883, -85.2284, 23.5685, -16.4379, -245.598, 50.4481, 17.4112, -58.301, 29.2974, 85.7638 )
+rotations = PoolVector3Array( 0, 0, -0.116541, 0, 0, -0.116541, 0, 0, -0.116541, 0.0670801, -0.0199078, 0.0494621, -0.00311692, 0.00667183, -0.0122157, -0.0129175, 0.00151233, 0.0892743, 0.42692, -0.491754, -0.456535, 0, 0, 0 )
+scales = PoolVector3Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 81.5676, 15.4201, 59.0359, 23.9252, 25.69, 23.9253, 60.823, 40.4301, 60.823, 53.3741, 108, 49.215, 1, 1, 1 )

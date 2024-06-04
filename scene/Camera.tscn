@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/ACamera.cs" type="Script" id=1]
+[ext_resource path="res://scene/Overlay.tscn" type="PackedScene" id=2]
+
+[node name="Camera" type="Camera"]
+current = true
+far = 10000.0
+script = ExtResource( 1 )
+
+[node name="Overlay" parent="." instance=ExtResource( 2 )]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=1]
+
+[node name="lighthouse" type="Spatial"]
+
+[node name="loader" type="Node" parent="."]
+script = ExtResource( 1 )
+files = PoolStringArray( "res://scene/details/grab_bar.tscn", "res://scene/details/grab_bar.tscn", "res://scene/details/grab_bar.tscn", "res://scene/details/grab_bar.tscn", "res://scene/details/grab_bar.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/box.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/box.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/sphere.tscn", "res://scene/island/parts/ground_ligthhouse/ground_ligthhouse000.tscn", "res://scene/island/parts/ground_ligthhouse/ground_ligthhouse001.tscn", "res://scene/island/parts/ground_ligthhouse/ground_ligthhouse002.tscn" )
+positions = PoolVector3Array( -32.2082, 142.293, 87.7876, -31.7022, 124.351, 86.4091, -31.2902, 109.738, 85.2853, -30.8029, 92.4582, 83.959, -30.3533, 76.5117, 82.7335, -96.2753, 33.5856, -77.4481, 3.32078, 41.9935, 17.8401, -44.2221, 40.5529, 114.879, 197.139, 21.6939, 16.2805, -31.9056, 125.115, 110.834, 88.9586, -13.9641, 85.246, -369.989, -92.0403, 17.5148, -43.9425, -41.278, 64.2366, 50.5667, -52.4216, -167.476 )
+rotations = PoolVector3Array( 0.0714047, 0.00261849, 0.0186765, 0.0714047, 0.00261849, 0.0186765, 0.0714047, 0.00261849, 0.0186765, 0.0714047, 0.00261849, 0.0186765, 0.0714047, 0.00261849, 0.0186765, -0.0391886, -0.343301, 0.112378, 0.0140755, -0.58981, -0.012551, 0.120278, -0.267575, 0.0109338, -0.161355, -1.02772, -0.12929, 0.0980973, 0.00359848, 0.0285678, -1.32341, -2.99613, 2.99163, -1.32341, -2.99613, 2.99163, -1.32341, -2.99613, 2.99163, -1.32341, -2.99613, 2.99163 )
+scales = PoolVector3Array( 1, 1, 2.4162, 1, 1, 2.4162, 1, 1, 2.4162, 1, 1, 2.4162, 1, 1, 2.4162, 72.7185, 7.07004, 72.7185, 77.866, 6.36001, 67.1737, 75.1167, 12.76, 75.1167, 102.127, 7.37, 98.8296, 13.2102, 71.1799, 13.2103, 86.511, 86.511, 86.5109, 0.999999, 0.999999, 1, 0.999999, 0.999999, 1, 0.999999, 0.999999, 1 )

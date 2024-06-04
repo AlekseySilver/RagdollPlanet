@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=5]
+
+[node name="desert" type="Spatial"]
+
+[node name="loader" type="Node" parent="."]
+script = ExtResource( 5 )
+state = 1
+files = PoolStringArray( "res://scene/details/var/box_rock.tscn", "res://scene/details/var/box_rock.tscn", "res://scene/details/var/box_rock.tscn", "res://scene/details/var/box_sand.tscn", "res://scene/island/parts/ground_desert/ground_desert000.tscn", "res://scene/island/parts/ground_desert/ground_desert001.tscn" )
+positions = PoolVector3Array( 276.092, 368.001, 63.3185, 450.811, 354.222, -113.118, 196.283, -46.9485, -54.6206, 91.4426, -57.2265, 47.993, -197.997, -137.828, -166.37, -771.519, -356.941, -89.597 )
+rotations = PoolVector3Array( 0.114843, -0.0967774, 0.707289, -0.410517, 0.270988, -0.846076, -0.0112537, 7.16777e-10, -0.15087, 0.0478677, -0.00177138, -0.0913079, 0, 3.14159, 3.14159, 0, 3.14159, 3.14159 )
+scales = PoolVector3Array( 132.757, 10.5802, 142.614, 114.106, 10.5802, 81.716, 50.3613, 18.1, 47.4984, 63.6034, 12.08, 64.7763, 1, 1, 1, 1, 1, 1 )

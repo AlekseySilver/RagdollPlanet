@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shader/DashCursor.gdshader" type="Shader" id=1]
+[ext_resource path="res://script/person/effect/ADashCursor.cs" type="Script" id=2]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.882353, 0, 0.478431 )
+shader_param/speed = 0.0
+shader_param/scale = 0.34
+shader_param/part = 0.5
+
+[node name="dash_cursor" type="MeshInstance"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+script = ExtResource( 2 )
+MIN_DIST = 4.0

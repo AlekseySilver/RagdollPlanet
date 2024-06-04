@@ -1,0 +1,1323 @@
+[gd_scene load_steps=91 format=2]
+
+[ext_resource path="res://material/env/ocean.tres" type="Material" id=1]
+[ext_resource path="res://geometry/cylinder_mesh.tres" type="ArrayMesh" id=2]
+[ext_resource path="res://material/grass.material" type="Material" id=3]
+[ext_resource path="res://scene/details/waterfallB.tscn" type="PackedScene" id=4]
+[ext_resource path="res://script/scene/AScenePlay.cs" type="Script" id=5]
+[ext_resource path="res://scene/island/parts/ground_skyscraper/ground_skyscraper003.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill008.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill007.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill010.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill011.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/details/var/box_snow.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill000.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill005.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scene/details/var/cylinder_snow.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill006.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill003.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill004.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill002.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scene/details/grab_bar.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill012.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scene/details/var/box_box.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scene/island/parts/ground_skyscraper/ground_skyscraper002.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scene/details/var/box_asfalt.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scene/details/var/box_terra.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scene/island/parts/ground_skyscraper/ground_skyscraper001.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scene/details/var/box_iron.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scene/island/parts/ground_hill/ground_hill013.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scene/details/var/box_rock.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain001.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain005.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain023.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain026.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain006.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain000.tscn" type="PackedScene" id=38]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain004.tscn" type="PackedScene" id=39]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain010.tscn" type="PackedScene" id=40]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain015.tscn" type="PackedScene" id=41]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain016.tscn" type="PackedScene" id=42]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain022.tscn" type="PackedScene" id=43]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain025.tscn" type="PackedScene" id=44]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain027.tscn" type="PackedScene" id=45]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain031.tscn" type="PackedScene" id=46]
+[ext_resource path="res://scene/details/var/cylinder_paving_stone.tscn" type="PackedScene" id=47]
+[ext_resource path="res://scene/details/var/box_paving_stone.tscn" type="PackedScene" id=48]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain036.tscn" type="PackedScene" id=49]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain002.tscn" type="PackedScene" id=50]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain014.tscn" type="PackedScene" id=51]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain019.tscn" type="PackedScene" id=52]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain012.tscn" type="PackedScene" id=53]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain024.tscn" type="PackedScene" id=54]
+[ext_resource path="res://scene/details/var/box_maple.tscn" type="PackedScene" id=55]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain033.tscn" type="PackedScene" id=56]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain034.tscn" type="PackedScene" id=57]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain030.tscn" type="PackedScene" id=58]
+[ext_resource path="res://scene/island/parts/ground_ligthhouse/ground_ligthhouse000.tscn" type="PackedScene" id=59]
+[ext_resource path="res://scene/island/parts/ground_ligthhouse/ground_ligthhouse001.tscn" type="PackedScene" id=60]
+[ext_resource path="res://scene/details/var/box_brick.tscn" type="PackedScene" id=61]
+[ext_resource path="res://scene/details/var/cylinder_brick.tscn" type="PackedScene" id=62]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain035.tscn" type="PackedScene" id=63]
+[ext_resource path="res://scene/details/var/box_roof.tscn" type="PackedScene" id=64]
+[ext_resource path="res://scene/details/var/box_pine.tscn" type="PackedScene" id=65]
+[ext_resource path="res://scene/details/var/cylinder_tree_bark.tscn" type="PackedScene" id=66]
+[ext_resource path="res://scene/island/parts/ground_forest/ground_forest000.tscn" type="PackedScene" id=67]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain008.tscn" type="PackedScene" id=68]
+[ext_resource path="res://scene/details/cylinder.tscn" type="PackedScene" id=69]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain009.tscn" type="PackedScene" id=70]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain011.tscn" type="PackedScene" id=71]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain013.tscn" type="PackedScene" id=72]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain018.tscn" type="PackedScene" id=73]
+[ext_resource path="res://scene/island/parts/ground_ligthhouse/ground_ligthhouse002.tscn" type="PackedScene" id=74]
+[ext_resource path="res://scene/details/box.tscn" type="PackedScene" id=75]
+[ext_resource path="res://scene/island/parts/ground_forest/ground_forest001.tscn" type="PackedScene" id=76]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain003.tscn" type="PackedScene" id=77]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain017.tscn" type="PackedScene" id=78]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain021.tscn" type="PackedScene" id=79]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain020.tscn" type="PackedScene" id=80]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain028.tscn" type="PackedScene" id=81]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain029.tscn" type="PackedScene" id=82]
+[ext_resource path="res://scene/details/sphere.tscn" type="PackedScene" id=83]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain007.tscn" type="PackedScene" id=84]
+[ext_resource path="res://scene/island/parts/ground_mountain/ground_mountain032.tscn" type="PackedScene" id=85]
+[ext_resource path="res://scene/island/parts/ground_desert/ground_desert001.tscn" type="PackedScene" id=86]
+[ext_resource path="res://scene/island/parts/ground_meadow/ground_meadow000.tscn" type="PackedScene" id=87]
+[ext_resource path="res://scene/island/parts/ground_meadow/ground_meadow001.tscn" type="PackedScene" id=88]
+[ext_resource path="res://scene/island/parts/ground_meadow/ground_meadow002.tscn" type="PackedScene" id=89]
+[ext_resource path="res://scene/island/parts/ground_desert/ground_desert000.tscn" type="PackedScene" id=90]
+[ext_resource path="res://scene/details/var/box_sand.tscn" type="PackedScene" id=91]
+
+[sub_resource type="SphereShape" id=5]
+
+[sub_resource type="SphereMesh" id=6]
+
+[sub_resource type="CylinderShape" id=11]
+
+[node name="Root" type="Spatial"]
+script = ExtResource( 5 )
+GRAVITY_SCALE = -20.0
+SUN_DAY_COLOR = Color( 1, 0.972549, 0.882353, 1 )
+SUN_DAWN_COLOR = Color( 0.933594, 0.295395, 0.759086, 1 )
+ui_resource = "res://scene/UI/UI_play.tscn"
+cursor_resource = "res://scene/editor/Cursor.tscn"
+player_resource = "res://scene/person/GyMan.tscn"
+
+[node name="Core" type="StaticBody" parent="."]
+transform = Transform( 1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0 )
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Core"]
+shape = SubResource( 5 )
+
+[node name="SphereCap" type="MeshInstance" parent="Core"]
+mesh = SubResource( 6 )
+material/0 = ExtResource( 1 )
+
+[node name="content" type="Spatial" parent="."]
+
+[node name="Y+" type="Spatial" parent="content"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1000, 0 )
+
+[node name="_Y+" type="StaticBody" parent="content/Y+"]
+transform = Transform( 100, 0, 0, 0, 10, 0, 0, 0, 100, 0, 6.10352e-05, 0 )
+
+[node name="collision_shape" type="CollisionShape" parent="content/Y+/_Y+"]
+shape = SubResource( 11 )
+
+[node name="mesh_instance" type="MeshInstance" parent="content/Y+/_Y+"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
+
+[node name="zones" type="Spatial" parent="."]
+
+[node name="small_mountain" type="Spatial" parent="zones"]
+transform = Transform( 0.587073, -0.80194, -0.110621, 0.809514, 0.580579, 0.0872672, -0.00575888, -0.140781, 0.990024, -750.153, 543.087, -131.689 )
+
+[node name="cylinder" parent="zones/small_mountain" instance=ExtResource( 14 )]
+transform = Transform( 127.632, 0.810454, -0.376222, -15.7164, 6.52166, -13.8642, -1.32871, 0.70959, 127.852, 186.317, 563.886, 163.133 )
+
+[node name="box" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 67.4024, -1.19882, -43.2739, 10.5274, 9.71343, -1.78142, 42.6799, -0.502673, 68.7799, -160.357, 412.171, 27.195 )
+
+[node name="box2" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 209.786, 0.513996, -0.664223, -16.8761, 6.34011, -22.2576, -1.17943, 0.706118, 200.33, 35.6623, 329.766, 124.306 )
+
+[node name="box3" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 84.22, -7.18223, -0.838587, 9.51028, 63.0068, -2.63557, 1.84227, 3.08106, 51.9419, -181.22, 412.086, -88.4195 )
+
+[node name="box4" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 71.9867, -2.67429, -27.4585, 8.87523, 16.829, -10.1825, 30.18, 1.42984, 68.4897, -56.3722, 510.378, -137.049 )
+
+[node name="box5" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 41.7016, -8.30644, 9.05833, 19.4287, 17.2436, 9.95572, -8.20672, -1.38553, 69.5983, -11.4019, 494.962, -237.453 )
+
+[node name="box6" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 28.2924, -11.5925, 36.3115, 23.8041, 15.0542, 24.0119, -28.5794, 1.06277, 55.9467, -28.8336, 449.144, -340.329 )
+
+[node name="box7" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 1.9342, -12.3447, 88.3561, 7.96416, 14.3622, 73.9122, -48.5304, 1.86492, 15.6509, -123.981, 367.534, -399.29 )
+
+[node name="box8" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -30.8893, -8.45313, 91.1011, -8.84438, 16.9542, 51.0422, -61.72, 1.80106, -52.9081, -273.712, 262.83, -363.461 )
+
+[node name="box9" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -59.105, -5.53001, 51.5665, -11.5935, 17.8829, 34.9586, -34.8415, 3.43053, -99.1099, -395.855, 176.495, -244.865 )
+
+[node name="box10" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -68.1437, -1.42922, -21.9934, -7.52452, 18.6324, 20.169, 11.8992, 3.59754, -113.197, -565.637, 129.772, -191.128 )
+
+[node name="box11" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -59.5167, -9.44797, -17.3364, -35.9033, 15.0444, 38.6148, -3.24886, 6.82333, -109.145, -645.441, 47.2929, -30.197 )
+
+[node name="box12" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -53.0236, -10.0225, 44.1092, -25.2162, 15.7768, 49.8576, -37.3434, 3.57757, -96.2966, -682.13, -40.1955, 65.0972 )
+
+[node name="box13" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( -53.6475, -12.3274, 71.2134, -15.6761, 13.6182, 85.3905, -90.0407, 4.97392, -57.2964, -622.029, -26.8098, 225.459 )
+
+[node name="box14" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 55.564, 0.0927138, 16.8188, -0.205219, 12.446, -2.75506, -8.61432, 0.301521, 108.55, -14.9653, 535.781, 41.5524 )
+
+[node name="box15" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 83.3085, -6.32395, -99.3519, 28.0832, 11.9778, -90.8454, 66.9704, 2.844, 161.685, -227.478, 346.551, 310.048 )
+
+[node name="box16" parent="zones/small_mountain" instance=ExtResource( 11 )]
+transform = Transform( 129.264, 5.03854, -64.6417, -81.923, 11.9992, -55.0411, 35.9708, 9.22162, 106.939, -25.7558, 288.191, 402.221 )
+
+[node name="cylinder2" parent="zones/small_mountain" instance=ExtResource( 14 )]
+transform = Transform( 146.218, 1.12192, -43.6211, -38.6163, 6.53526, -52.0717, 31.4801, 2.80565, 138.735, 195.501, 203.383, 488.9 )
+
+[node name="ground_hill000" parent="zones/small_mountain" instance=ExtResource( 12 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 207.501, 29.7522, 389.606 )
+
+[node name="ground_hill002" parent="zones/small_mountain" instance=ExtResource( 18 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, -247.782, 233.74, -209.419 )
+
+[node name="ground_hill003" parent="zones/small_mountain" instance=ExtResource( 16 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 307.813, 184.301, -183.602 )
+
+[node name="ground_hill004" parent="zones/small_mountain" instance=ExtResource( 17 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, -323.923, 72.4261, 297.217 )
+
+[node name="ground_hill005" parent="zones/small_mountain" instance=ExtResource( 13 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 165.259, 392.573, 355.945 )
+
+[node name="ground_hill006" parent="zones/small_mountain" instance=ExtResource( 15 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 107.601, 570.817, 17.2156 )
+
+[node name="ground_hill007" parent="zones/small_mountain" instance=ExtResource( 8 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 293.996, 394.084, 125.954 )
+
+[node name="ground_hill008" parent="zones/small_mountain" instance=ExtResource( 7 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, -16.2348, 545.803, 250.165 )
+
+[node name="ground_hill010" parent="zones/small_mountain" instance=ExtResource( 9 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 263.583, 656.795, 257.793 )
+
+[node name="ground_hill011" parent="zones/small_mountain" instance=ExtResource( 10 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 227.83, 702.426, 94.9617 )
+
+[node name="ground_hill012" parent="zones/small_mountain" instance=ExtResource( 20 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 243.92, 753.715, 213.879 )
+
+[node name="ground_hill013" parent="zones/small_mountain" instance=ExtResource( 27 )]
+transform = Transform( 0.587073, 0.809514, -0.00575918, -0.801941, 0.580579, -0.140781, -0.11062, 0.0872671, 0.990024, 307.403, 727.362, 169.071 )
+
+[node name="city" type="Spatial" parent="zones"]
+transform = Transform( 0.972919, -0.231002, 0.00819001, -0.0614596, -0.22437, 0.972564, -0.222827, -0.946729, -0.232491, -226.987, -220.473, -930.278 )
+
+[node name="box" parent="zones/city" instance=ExtResource( 24 )]
+transform = Transform( 60.4366, -0.00141033, -2.21238, -0.568939, 8.5395, -13.9804, 2.28201, 2.16638, 55.107, 1.92041, 561.114, 328.878 )
+
+[node name="box2" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.0522817, 1.89489, 9.90409, 0.66472, 12.2436, -1.51338, -7.17366, 1.12069, -0.212412, 166.276, 103.867, 111.65 )
+
+[node name="grab_bar" parent="zones/city" instance=ExtResource( 19 )]
+transform = Transform( 0.988043, 0.150243, -0.0549163, -0.153193, 0.982, -0.175388, 0.0173729, 0.11447, 1.57667, 166.656, 106.658, 126.975 )
+
+[node name="box3" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 39.3833, -0.632235, 7.67307, 3.97792, 23.1282, -2.70677, -17.0266, 3.94105, 17.1158, -20.22, 150.516, 179.145 )
+
+[node name="box4" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 15.8486, -0.525242, 13.7753, 1.48802, 15.1895, -3.75816, -6.8718, 2.07775, 30.9565, 27.5472, 146.95, 143.929 )
+
+[node name="box5" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 60.4444, -0.0393759, 15.1247, 5.6751, 1.13872, -4.1263, -26.2082, 0.155764, 33.9889, -58.946, 160.19, 137.511 )
+
+[node name="box6" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 16.3473, -0.0831229, 13.1156, 4.75529, 0.965602, -15.9056, -5.22247, 0.619034, 26.5715, -9.86272, 118.357, 219.225 )
+
+[node name="box7" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 17.7944, -0.000184302, -1.30773, -0.16751, 1.11469, -8.2638, 0.671895, 0.282785, 32.5737, -0.17955, 95.5109, 273.512 )
+
+[node name="box8" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 15.5995, 0.166065, -1.98493, -2.35785, 1.08835, -14.657, -0.0733689, 0.332298, 48.9967, 162.345, 69.2662, 321.392 )
+
+[node name="box9" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 43.4532, 0.390812, -0.820049, -7.0159, 2.42228, -4.81617, 0.0437009, 0.284064, 42.1967, 170.804, 87.876, 121.415 )
+
+[node name="box10" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.021263, 1.13747, 26.3541, 1.45486, 1.18626, -24.8794, -11.6172, 0.146476, -3.16395, 238.829, 53.9099, 145.111 )
+
+[node name="box11" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 39.7075, 0.803896, -1.08663, -12.2095, 2.61433, -3.54177, -0.00319774, 0.338418, 29.942, 301.074, 19.8101, 127.879 )
+
+[node name="box12" parent="zones/city" instance=ExtResource( 21 )]
+transform = Transform( 3.82497, 1.1386, -0.200107, -1.17304, 3.70371, -0.702291, -0.01474, 0.71386, 3.96285, 283.89, 21.9471, 188.895 )
+
+[node name="box13" parent="zones/city" instance=ExtResource( 23 )]
+transform = Transform( 42.8021, -0.976616, -2.26213, -12.9792, -3.2124, -8.00469, -0.164619, -0.650168, 42.9481, 300.836, 6.90436, 200.273 )
+
+[node name="box14" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57384, 0.120893, 66.9354, 12.2493, 1.57163, -5.44161, -40.4277, 0.480899, 0.956998, 81.5615, 77.6868, 324.442 )
+
+[node name="box15" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786918, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 39.1619, 81.8322, 366.773 )
+
+[node name="box16" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786919, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 124.113, 98.5692, 377.457 )
+
+[node name="box17" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57384, 0.120921, 66.9357, 12.2494, 1.572, -5.44161, -40.4279, 0.481015, 0.957002, 85.2856, 126.111, 339.26 )
+
+[node name="box18" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354042, 0.833362, -20.1738, -2.75563, 1.12451, 13.8215, 9.09467, 0.373162, 3.40249, 80.7578, 81.4813, 356.418 )
+
+[node name="box19" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.35405, -0.651078, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 82.3041, 98.913, 385.686 )
+
+[node name="box20" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786918, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 46.6398, 179.045, 396.519 )
+
+[node name="box21" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786919, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 131.591, 195.781, 407.203 )
+
+[node name="box22" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57384, 0.120921, 66.9357, 12.2494, 1.572, -5.44161, -40.4279, 0.481015, 0.957002, 92.7634, 223.323, 369.005 )
+
+[node name="box23" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354042, 0.833362, -20.1738, -2.75563, 1.12451, 13.8215, 9.09467, 0.373162, 3.40249, 88.2355, 178.694, 386.164 )
+
+[node name="box24" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.35405, -0.651078, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 89.7818, 196.125, 415.432 )
+
+[node name="box25" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786873, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 129.636, 147.316, 304.684 )
+
+[node name="box26" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786876, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 48.3985, 178.854, 308.773 )
+
+[node name="box27" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -1.57374, 0.120922, -66.9357, -12.2494, 1.572, 5.44164, 40.4279, 0.481014, -0.956824, 89.026, 174.717, 354.131 )
+
+[node name="box28" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.354047, -0.651079, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 87.9953, 147.085, 314.862 )
+
+[node name="box29" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354039, 0.833361, -20.1738, -2.75563, 1.12451, 13.8214, 9.09467, 0.373162, 3.40249, 90.1577, 177.867, 300.346 )
+
+[node name="box30" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786918, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 54.1149, 276.223, 426.255 )
+
+[node name="box31" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786919, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 139.066, 292.959, 436.938 )
+
+[node name="box32" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57385, 0.120921, 66.9357, 12.2494, 1.57199, -5.44164, -40.4279, 0.481012, 0.957002, 100.238, 320.501, 398.74 )
+
+[node name="box33" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354036, 0.833362, -20.1738, -2.75562, 1.12451, 13.8215, 9.09466, 0.37316, 3.40249, 95.7106, 275.871, 415.899 )
+
+[node name="box34" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.35405, -0.651078, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 97.2569, 293.303, 445.167 )
+
+[node name="box35" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786873, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 137.111, 244.494, 334.419 )
+
+[node name="box36" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786876, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 55.8737, 276.032, 338.508 )
+
+[node name="box37" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -1.57374, 0.120922, -66.9357, -12.2494, 1.572, 5.44164, 40.4279, 0.481014, -0.956824, 96.5012, 271.895, 383.867 )
+
+[node name="box38" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.354047, -0.651079, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 95.4704, 244.262, 344.597 )
+
+[node name="box39" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354039, 0.833361, -20.1738, -2.75563, 1.12451, 13.8214, 9.09467, 0.373162, 3.40249, 97.6328, 275.045, 330.081 )
+
+[node name="box40" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786918, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 61.586, 373.35, 455.974 )
+
+[node name="box41" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786919, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 146.537, 390.086, 466.657 )
+
+[node name="box42" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57385, 0.120921, 66.9357, 12.2494, 1.57199, -5.44164, -40.4279, 0.481012, 0.957002, 107.71, 417.628, 428.46 )
+
+[node name="box43" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354036, 0.833362, -20.1738, -2.75562, 1.12451, 13.8215, 9.09466, 0.37316, 3.40249, 103.182, 372.999, 445.619 )
+
+[node name="box44" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.35405, -0.651078, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 104.728, 390.431, 474.887 )
+
+[node name="box45" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786873, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 144.582, 341.621, 364.139 )
+
+[node name="box46" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786876, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 63.3449, 373.159, 368.228 )
+
+[node name="box47" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -1.57374, 0.120922, -66.9357, -12.2494, 1.572, 5.44164, 40.4279, 0.481014, -0.956824, 103.972, 369.022, 413.586 )
+
+[node name="box48" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.354047, -0.651079, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 102.942, 341.391, 374.317 )
+
+[node name="box49" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354039, 0.833361, -20.1738, -2.75563, 1.12451, 13.8214, 9.09467, 0.373162, 3.40249, 105.104, 372.172, 359.801 )
+
+[node name="box50" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786918, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 69.0612, 470.528, 485.71 )
+
+[node name="box51" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.786919, 1.00242, 20.9174, 6.12471, 13.0319, -1.70049, -20.214, 3.98758, 0.299063, 154.012, 487.264, 496.393 )
+
+[node name="box52" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 1.57385, 0.120921, 66.9357, 12.2494, 1.57199, -5.44164, -40.4279, 0.481012, 0.957002, 115.185, 514.806, 458.195 )
+
+[node name="box53" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354044, 0.83336, -20.1737, -2.75562, 1.1245, 13.8215, 9.09467, 0.373157, 3.40248, 110.657, 470.177, 475.354 )
+
+[node name="box54" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.35405, -0.651078, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 112.203, 487.609, 504.622 )
+
+[node name="box55" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786873, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 152.057, 438.799, 393.874 )
+
+[node name="box56" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.786876, 1.00245, -20.9174, -6.12471, 13.0319, 1.70052, 20.214, 3.98758, -0.299007, 70.8199, 470.337, 397.963 )
+
+[node name="box57" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -1.57374, 0.120922, -66.9357, -12.2494, 1.572, 5.44164, 40.4279, 0.481014, -0.956824, 111.447, 466.2, 443.322 )
+
+[node name="box58" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 0.354047, -0.651079, 22.0362, 2.75563, 1.24518, 10.39, -9.09467, 0.351936, 4.00597, 110.417, 438.568, 404.052 )
+
+[node name="box59" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -0.354039, 0.833361, -20.1738, -2.75563, 1.12451, 13.8214, 9.09467, 0.373162, 3.40249, 112.579, 469.35, 389.536 )
+
+[node name="box60" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7388, -0.132752, 61.4353, 1.45834, 1.63834, 6.88298, -38.7893, 0.118882, -26.2525, -92.982, 164.907, 83.2679 )
+
+[node name="box61" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -116.272, 172.313, 138.128 )
+
+[node name="box62" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -41.0964, 205.951, 109.354 )
+
+[node name="box63" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7389, -0.132782, 61.4356, 1.45835, 1.63872, 6.88295, -38.7895, 0.11891, -26.2526, -97.0728, 215.386, 86.9316 )
+
+[node name="box64" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581152, -20.3934, -0.328068, 1.31146, 10.4493, 8.72608, -0.20148, 9.19328, -82.9317, 176.637, 111.533 )
+
+[node name="box65" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.781312, 18.3483, 0.328071, 1.15881, 14.7899, -8.72609, 0.380729, -7.36183, -75.4077, 201.033, 134.14 )
+
+[node name="box66" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -124.483, 273.651, 145.481 )
+
+[node name="box67" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -49.3076, 307.289, 116.707 )
+
+[node name="box68" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7389, -0.132782, 61.4356, 1.45835, 1.63872, 6.88295, -38.7895, 0.11891, -26.2526, -105.284, 316.724, 94.285 )
+
+[node name="box69" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581152, -20.3934, -0.328068, 1.31146, 10.4493, 8.72608, -0.20148, 9.19328, -91.1431, 277.975, 118.886 )
+
+[node name="box70" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.781312, 18.3483, 0.328071, 1.15881, 14.7899, -8.72609, 0.380729, -7.36183, -83.619, 302.372, 141.494 )
+
+[node name="box71" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10077, -19.1986, -0.729169, 13.585, -2.15094, 19.3947, 0.985766, 8.20399, -75.9233, 234.407, 33.9886 )
+
+[node name="box72" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10076, -19.1986, -0.729169, 13.585, -2.15092, 19.3947, 0.98576, 8.20399, -155.177, 251.092, 66.4139 )
+
+[node name="box73" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 16.739, -0.132783, -61.4356, -1.45835, 1.63872, -6.88302, 38.7894, 0.118911, 26.2528, -101.177, 266.055, 90.6067 )
+
+[node name="box74" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.78131, 18.3483, 0.328071, 1.1588, 14.7899, -8.72608, 0.380727, -7.36182, -109.215, 229.476, 60.5394 )
+
+[node name="box75" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581151, -20.3934, -0.328069, 1.31146, 10.4493, 8.72608, -0.201479, 9.19329, -120.811, 255.339, 41.5789 )
+
+[node name="box76" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -132.692, 374.953, 152.832 )
+
+[node name="box77" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -57.5161, 408.592, 124.058 )
+
+[node name="box78" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7389, -0.132781, 61.4356, 1.45834, 1.63871, 6.88295, -38.7895, 0.118909, -26.2526, -113.492, 418.027, 101.636 )
+
+[node name="box79" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581152, -20.3934, -0.328068, 1.31146, 10.4493, 8.72608, -0.20148, 9.19328, -99.3513, 379.277, 126.237 )
+
+[node name="box80" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76558, -0.781312, 18.3483, 0.32807, 1.15881, 14.7899, -8.72608, 0.380728, -7.36183, -91.8274, 403.674, 148.845 )
+
+[node name="box81" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10077, -19.1986, -0.729169, 13.585, -2.15094, 19.3947, 0.985766, 8.20399, -84.1319, 335.71, 41.3393 )
+
+[node name="box82" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10076, -19.1986, -0.729169, 13.585, -2.15092, 19.3947, 0.98576, 8.20399, -163.385, 352.395, 73.7646 )
+
+[node name="box83" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 16.739, -0.132783, -61.4356, -1.45835, 1.63872, -6.88302, 38.7894, 0.118911, 26.2528, -109.386, 367.358, 97.9575 )
+
+[node name="box84" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.78131, 18.3483, 0.328071, 1.1588, 14.7899, -8.72608, 0.380727, -7.36182, -117.423, 330.778, 67.8901 )
+
+[node name="box85" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581151, -20.3934, -0.328069, 1.31146, 10.4493, 8.72608, -0.201479, 9.19329, -129.02, 356.642, 48.9297 )
+
+[node name="box86" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -140.896, 476.203, 160.179 )
+
+[node name="box87" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -65.7203, 509.842, 131.405 )
+
+[node name="box88" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7389, -0.132781, 61.4356, 1.45834, 1.63871, 6.88295, -38.7895, 0.118909, -26.2526, -121.697, 519.277, 108.983 )
+
+[node name="box89" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581152, -20.3934, -0.328068, 1.31146, 10.4493, 8.72608, -0.20148, 9.19328, -107.556, 480.528, 133.584 )
+
+[node name="box90" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76558, -0.781312, 18.3483, 0.32807, 1.15881, 14.7899, -8.72608, 0.380728, -7.36183, -100.031, 504.924, 156.191 )
+
+[node name="box91" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10077, -19.1986, -0.729169, 13.585, -2.15094, 19.3947, 0.985766, 8.20399, -92.3361, 436.96, 48.6863 )
+
+[node name="box92" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10076, -19.1986, -0.729169, 13.585, -2.15092, 19.3947, 0.98576, 8.20399, -171.589, 453.644, 81.1116 )
+
+[node name="box93" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 16.739, -0.132783, -61.4356, -1.45835, 1.63872, -6.88302, 38.7894, 0.118911, 26.2528, -117.59, 468.608, 105.304 )
+
+[node name="box94" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.78131, 18.3483, 0.328071, 1.1588, 14.7899, -8.72608, 0.380727, -7.36182, -125.627, 432.029, 75.2372 )
+
+[node name="box95" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581151, -20.3934, -0.328069, 1.31146, 10.4493, 8.72608, -0.201479, 9.19329, -137.224, 457.892, 56.2766 )
+
+[node name="box96" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -149.104, 577.506, 167.53 )
+
+[node name="box97" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -8.36944, -1.10077, 19.1986, 0.729177, 13.585, 2.15094, -19.3947, 0.985768, -8.20394, -73.9286, 611.145, 138.756 )
+
+[node name="box98" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -16.7389, -0.132781, 61.4356, 1.45834, 1.63871, 6.88295, -38.7895, 0.118909, -26.2526, -129.905, 620.579, 116.333 )
+
+[node name="box99" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581151, -20.3934, -0.328068, 1.31145, 10.4494, 8.72608, -0.20148, 9.19327, -115.764, 581.83, 140.935 )
+
+[node name="box100" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76558, -0.781312, 18.3483, 0.32807, 1.15881, 14.7899, -8.72608, 0.380728, -7.36183, -108.24, 606.227, 163.542 )
+
+[node name="box101" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10077, -19.1986, -0.729169, 13.585, -2.15094, 19.3947, 0.985766, 8.20399, -100.544, 538.262, 56.037 )
+
+[node name="box102" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 8.36949, -1.10076, -19.1986, -0.729169, 13.585, -2.15092, 19.3947, 0.98576, 8.20399, -179.798, 554.947, 88.4623 )
+
+[node name="box103" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 16.739, -0.132783, -61.4356, -1.45835, 1.63872, -6.88302, 38.7894, 0.118911, 26.2528, -125.798, 569.91, 112.655 )
+
+[node name="box104" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -3.76559, -0.78131, 18.3483, 0.328071, 1.1588, 14.7899, -8.72608, 0.380727, -7.36182, -133.836, 533.33, 82.588 )
+
+[node name="box105" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 3.76559, 0.581151, -20.3934, -0.328068, 1.31146, 10.4493, 8.72608, -0.201479, 9.19329, -145.432, 559.194, 63.6274 )
+
+[node name="box106" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1612, -0.150085, 44.9693, -7.53464, 1.53194, 21.6719, -27.5524, -0.588676, 44.9328, -112.593, 166.623, -441.619 )
+
+[node name="box107" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24452, 14.0529, -3.76733, 12.7027, 6.77251, -13.7763, -4.88127, 14.0415, -172.031, 172.625, -447.79 )
+
+[node name="box108" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24451, 14.0529, -3.76733, 12.7027, 6.77249, -13.7763, -4.88126, 14.0415, -120.08, 223.476, -399.559 )
+
+[node name="box109" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1613, -0.150121, 44.9695, -7.53467, 1.5323, 21.6721, -27.5525, -0.588817, 44.933, -117.218, 213.824, -459.757 )
+
+[node name="box110" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -135.959, 183.656, -427.426 )
+
+[node name="box111" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611794, 13.023, -1.695, 0.914608, 18.6333, -6.19822, -0.94204, 9.63315, -154.764, 211.408, -421.175 )
+
+[node name="box112" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24452, 14.0529, -3.76733, 12.7027, 6.77251, -13.7763, -4.88127, 14.0415, -181.314, 267.382, -484.203 )
+
+[node name="box113" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24451, 14.0529, -3.76733, 12.7027, 6.77249, -13.7763, -4.88126, 14.0415, -129.364, 318.233, -435.972 )
+
+[node name="box114" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1613, -0.150121, 44.9695, -7.53467, 1.5323, 21.6721, -27.5525, -0.588817, 44.933, -126.502, 308.581, -496.17 )
+
+[node name="box115" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -145.242, 278.413, -463.838 )
+
+[node name="box116" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611794, 13.023, -1.695, 0.914608, 18.6333, -6.19822, -0.94204, 9.63315, -164.047, 306.166, -457.588 )
+
+[node name="box117" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.24449, -14.0529, 3.76735, 12.7027, -6.77247, 13.7763, -4.88126, -14.0415, -60.2012, 232.534, -463.082 )
+
+[node name="box118" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.2445, -14.0529, 3.76735, 12.7027, -6.77249, 13.7763, -4.88127, -14.0415, -116.762, 228.739, -529.395 )
+
+[node name="box119" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -31.1613, -0.15012, -44.9694, 7.53467, 1.5323, -21.672, 27.5525, -0.588816, -44.9331, -121.858, 261.203, -477.963 )
+
+[node name="box120" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611792, 13.0229, -1.695, 0.914598, 18.6334, -6.19822, -0.942036, 9.63309, -96.2173, 220.935, -483.228 )
+
+[node name="box121" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -82.0166, 240.179, -507.538 )
+
+[node name="box122" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24452, 14.0529, -3.76733, 12.7027, 6.77251, -13.7763, -4.88127, 14.0415, -190.594, 362.105, -520.602 )
+
+[node name="box123" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24451, 14.0529, -3.76733, 12.7027, 6.77249, -13.7763, -4.88126, 14.0415, -138.644, 412.956, -472.371 )
+
+[node name="box124" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1613, -0.15012, 44.9695, -7.53467, 1.53229, 21.6721, -27.5525, -0.588813, 44.933, -135.782, 403.305, -532.569 )
+
+[node name="box125" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -154.522, 373.136, -500.237 )
+
+[node name="box126" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611794, 13.023, -1.695, 0.914608, 18.6333, -6.19822, -0.94204, 9.63315, -173.327, 400.889, -493.987 )
+
+[node name="box127" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.24449, -14.0529, 3.76735, 12.7027, -6.77247, 13.7763, -4.88126, -14.0415, -69.4814, 327.258, -499.481 )
+
+[node name="box128" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.2445, -14.0529, 3.76735, 12.7027, -6.77249, 13.7763, -4.88127, -14.0415, -126.042, 323.462, -565.794 )
+
+[node name="box129" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -31.1613, -0.15012, -44.9694, 7.53467, 1.5323, -21.672, 27.5525, -0.588816, -44.9331, -131.139, 355.927, -514.362 )
+
+[node name="box130" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01005, -0.611792, 13.0229, -1.695, 0.914598, 18.6334, -6.19821, -0.942036, 9.63309, -105.497, 315.658, -519.628 )
+
+[node name="box131" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -91.2969, 334.902, -543.937 )
+
+[node name="box132" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24452, 14.0529, -3.76733, 12.7027, 6.77251, -13.7763, -4.88127, 14.0415, -199.869, 456.78, -556.982 )
+
+[node name="box133" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24451, 14.0529, -3.76733, 12.7027, 6.77249, -13.7763, -4.88126, 14.0415, -147.919, 507.631, -508.752 )
+
+[node name="box134" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1613, -0.15012, 44.9695, -7.53467, 1.53229, 21.6721, -27.5525, -0.588813, 44.933, -145.057, 497.979, -568.949 )
+
+[node name="box135" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -163.798, 467.811, -536.618 )
+
+[node name="box136" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611794, 13.023, -1.695, 0.914608, 18.6333, -6.19822, -0.94204, 9.63315, -182.603, 495.564, -530.368 )
+
+[node name="box137" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.24449, -14.0529, 3.76735, 12.7027, -6.77247, 13.7763, -4.88126, -14.0415, -78.7567, 421.932, -535.862 )
+
+[node name="box138" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.2445, -14.0529, 3.76735, 12.7027, -6.77249, 13.7763, -4.88127, -14.0415, -135.317, 418.136, -602.174 )
+
+[node name="box139" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -31.1613, -0.15012, -44.9694, 7.53467, 1.5323, -21.672, 27.5525, -0.588816, -44.9331, -140.414, 450.601, -550.743 )
+
+[node name="box140" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01005, -0.611792, 13.0229, -1.695, 0.914598, 18.6334, -6.19821, -0.942036, 9.63309, -114.773, 410.334, -556.008 )
+
+[node name="box141" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -100.572, 429.577, -580.318 )
+
+[node name="box142" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24452, 14.0529, -3.76733, 12.7027, 6.77251, -13.7763, -4.88127, 14.0415, -209.15, 551.503, -593.382 )
+
+[node name="box143" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 15.5807, -1.24451, 14.0529, -3.76733, 12.7027, 6.77249, -13.7763, -4.88126, 14.0415, -157.199, 602.354, -545.151 )
+
+[node name="box144" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 31.1613, -0.15012, 44.9695, -7.53467, 1.53229, 21.6721, -27.5525, -0.588813, 44.933, -154.337, 592.703, -605.349 )
+
+[node name="box145" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39522, 4.96683, 6.19823, 0.0544435, -18.7019, -173.078, 562.535, -573.017 )
+
+[node name="box146" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01006, -0.611794, 13.023, -1.695, 0.914608, 18.6333, -6.19822, -0.94204, 9.63315, -191.883, 590.287, -566.767 )
+
+[node name="box147" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.24449, -14.0529, 3.76735, 12.7027, -6.77247, 13.7763, -4.88126, -14.0415, -88.0368, 516.656, -572.261 )
+
+[node name="box148" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -15.5807, -1.2445, -14.0529, 3.76735, 12.7027, -6.77249, 13.7763, -4.88127, -14.0415, -144.597, 512.86, -638.574 )
+
+[node name="box149" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -31.1613, -0.15012, -44.9694, 7.53467, 1.5323, -21.672, 27.5525, -0.588816, -44.9331, -149.694, 545.325, -587.142 )
+
+[node name="box150" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 7.01005, -0.611792, 13.0229, -1.695, 0.914598, 18.6334, -6.19821, -0.942036, 9.63309, -124.053, 505.056, -592.407 )
+
+[node name="box151" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -7.01006, 0.385497, -15.3351, 1.695, 1.39523, 4.96676, 6.19822, 0.0544406, -18.7019, -109.852, 524.3, -616.717 )
+
+[node name="box152" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6325, 0.182213, 64.1415, -7.49387, 1.59938, -10.9772, -39.9431, -0.35313, -16.6204, 132.678, 181.952, -257.13 )
+
+[node name="box153" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 105.282, 208.865, -210.956 )
+
+[node name="box154" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 188.391, 220.179, -234.949 )
+
+[node name="box155" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6326, 0.182256, 64.1419, -7.4939, 1.59975, -10.9772, -39.9432, -0.353214, -16.6205, 138.291, 231.231, -268.009 )
+
+[node name="box156" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 141.601, 199.801, -231.845 )
+
+[node name="box157" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.573869, 21.6277, -1.68583, 1.32748, 8.85833, -8.98565, -0.0819264, -7.96055, 151.213, 228.301, -215.775 )
+
+[node name="box158" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 116.552, 307.794, -232.799 )
+
+[node name="box159" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 199.662, 319.107, -256.792 )
+
+[node name="box160" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6326, 0.182256, 64.1419, -7.4939, 1.59975, -10.9772, -39.9432, -0.353214, -16.6205, 149.562, 330.16, -289.852 )
+
+[node name="box161" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 152.871, 298.729, -253.688 )
+
+[node name="box162" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.573869, 21.6277, -1.68583, 1.32748, 8.85833, -8.98565, -0.0819264, -7.96055, 162.484, 327.229, -237.617 )
+
+[node name="box163" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 168.627, 230.116, -319.88 )
+
+[node name="box164" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 91.1147, 267.93, -306.734 )
+
+[node name="box165" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 11.6323, 0.18226, -64.142, 7.4939, 1.59975, 10.9773, 39.9433, -0.353213, 16.62, 143.928, 280.695, -278.932 )
+
+[node name="box166" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.57387, 21.6276, -1.68583, 1.32747, 8.85843, -8.98565, -0.081924, -7.96054, 132.241, 238.588, -298.86 )
+
+[node name="box167" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98565, -0.450519, 2.52042, 128.218, 259.153, -325.764 )
+
+[node name="box168" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 127.819, 406.687, -254.634 )
+
+[node name="box169" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 210.929, 418.001, -278.627 )
+
+[node name="box170" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6326, 0.182255, 64.1419, -7.4939, 1.59974, -10.9772, -39.9432, -0.353212, -16.6205, 160.829, 429.053, -311.687 )
+
+[node name="box171" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 164.138, 397.622, -275.523 )
+
+[node name="box172" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.573869, 21.6277, -1.68583, 1.32748, 8.85833, -8.98565, -0.0819264, -7.96055, 173.751, 426.123, -259.452 )
+
+[node name="box173" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 179.894, 329.01, -341.715 )
+
+[node name="box174" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 102.381, 366.823, -328.569 )
+
+[node name="box175" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 11.6323, 0.18226, -64.142, 7.4939, 1.59975, 10.9773, 39.9433, -0.353213, 16.62, 155.195, 379.589, -300.767 )
+
+[node name="box176" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61687, -0.57387, 21.6276, -1.68583, 1.32747, 8.85843, -8.98564, -0.081924, -7.96054, 143.508, 337.481, -320.695 )
+
+[node name="box177" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 139.485, 358.047, -347.599 )
+
+[node name="box178" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 139.08, 505.529, -276.457 )
+
+[node name="box179" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 222.19, 516.843, -300.45 )
+
+[node name="box180" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6326, 0.182255, 64.1419, -7.4939, 1.59974, -10.9772, -39.9432, -0.353212, -16.6205, 172.09, 527.895, -333.511 )
+
+[node name="box181" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 175.399, 496.465, -297.346 )
+
+[node name="box182" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.573869, 21.6277, -1.68583, 1.32748, 8.85833, -8.98565, -0.0819264, -7.96055, 185.012, 524.965, -281.276 )
+
+[node name="box183" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 191.155, 427.852, -363.539 )
+
+[node name="box184" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 113.642, 465.665, -350.392 )
+
+[node name="box185" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 11.6323, 0.18226, -64.142, 7.4939, 1.59975, 10.9773, 39.9433, -0.353213, 16.62, 166.456, 478.431, -322.591 )
+
+[node name="box186" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61687, -0.57387, 21.6276, -1.68583, 1.32747, 8.85843, -8.98564, -0.081924, -7.96054, 154.769, 436.324, -342.519 )
+
+[node name="box187" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 150.745, 456.889, -369.422 )
+
+[node name="box188" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 150.347, 604.422, -298.292 )
+
+[node name="box189" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -5.8163, 1.5109, 20.0443, -3.74695, 13.2619, -3.43037, -19.9716, -2.92813, -5.19388, 233.457, 615.736, -322.285 )
+
+[node name="box190" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -11.6326, 0.182255, 64.1419, -7.4939, 1.59974, -10.9772, -39.9432, -0.353212, -16.6205, 183.357, 626.789, -355.346 )
+
+[node name="box191" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61688, 0.848605, -18.8206, 1.68583, 1.08403, 15.7807, 8.98563, -0.450518, 2.52042, 186.666, 595.358, -319.181 )
+
+[node name="box192" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61688, -0.573869, 21.6277, -1.68583, 1.32748, 8.85833, -8.98565, -0.0819264, -7.96055, 196.279, 623.858, -303.111 )
+
+[node name="box193" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 202.422, 526.745, -385.374 )
+
+[node name="box194" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 5.81636, 1.51092, -20.0443, 3.74695, 13.2619, 3.43041, 19.9716, -2.92814, 5.19393, 124.909, 564.558, -372.227 )
+
+[node name="box195" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 11.6323, 0.18226, -64.142, 7.4939, 1.59975, 10.9773, 39.9433, -0.353213, 16.62, 177.723, 577.324, -344.426 )
+
+[node name="box196" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( -2.61687, -0.57387, 21.6276, -1.68583, 1.32747, 8.85843, -8.98564, -0.081924, -7.96054, 166.035, 535.217, -364.353 )
+
+[node name="box197" parent="zones/city" instance=ExtResource( 26 )]
+transform = Transform( 2.61687, 0.848608, -18.8206, 1.68583, 1.08404, 15.7806, 8.98564, -0.450519, 2.52042, 162.012, 555.782, -391.257 )
+
+[node name="ground_skyscraper001" parent="zones/city" instance=ExtResource( 25 )]
+transform = Transform( 0.972919, -0.0614547, -0.222828, -0.231002, -0.224374, -0.946728, 0.00818428, 0.972564, -0.232493, -72.5701, 61.5725, -256.6 )
+
+[node name="ground_skyscraper002" parent="zones/city" instance=ExtResource( 22 )]
+transform = Transform( 0.972919, -0.0614547, -0.222828, -0.231002, -0.224374, -0.946728, 0.00818428, 0.972564, -0.232493, 11.3377, 6.95654, 166.465 )
+
+[node name="ground_skyscraper003" parent="zones/city" instance=ExtResource( 6 )]
+transform = Transform( 0.972919, -0.0614547, -0.222828, -0.231002, -0.224374, -0.946728, 0.00818428, 0.972564, -0.232493, 205.515, -146.324, 402.203 )
+
+[node name="big_mountain" type="Spatial" parent="zones"]
+transform = Transform( -0.4431, 0.883681, 0.150895, -0.89646, -0.435911, -0.0796277, -0.00458867, -0.170555, 0.985338, 878.143, -433.176, -169.486 )
+
+[node name="cylinder" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 30.5891, -9.64925, -0.861112, 0.915591, 3.35101, 30.654, -2.13082, -137.081, 0.809966, 389.468, 993.918, 62.9636 )
+
+[node name="cylinder2" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 0.540318, -108.248, 5.2557, 2.49701, 18.9227, 30.115, -30.5702, -0.367629, 2.55272, 281.752, 1010.96, -79.6125 )
+
+[node name="box" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 36.5768, -1.3288, -64.8547, 11.3963, 21.1593, 3.01996, 54.7638, -3.51572, 42.688, -105.263, 559.073, -246.584 )
+
+[node name="box2" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 97.0179, 0.837262, 35.7377, -2.45219, 20.1197, -9.62506, -26.0759, 1.22305, 133.871, -18.0019, 691.019, -58.6596 )
+
+[node name="cylinder3" parent="zones/big_mountain" instance=ExtResource( 69 )]
+transform = Transform( 49.7484, -74.195, 33.1497, -47.2859, -86.666, 30.2843, 4.16909, -97.6234, -52.0794, 769.24, 383.834, -270.965 )
+
+[node name="cylinder4" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 32.1263, 86.9037, 45.9595, -51.147, -22.7257, 44.7645, 32.8641, -120.321, 24.74, 655.374, 594.519, 204.08 )
+
+[node name="cylinder5" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 3.09281, 130.928, 33.5211, -39.8675, -56.2486, 49.7515, 55.9389, -47.327, 33.6044, 425.834, 682.607, 364.393 )
+
+[node name="cylinder6" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 154.476, -0.214722, 0.631451, 3.49224, 9.4662, 2.6387, -0.691027, -0.160802, 154.493, -55.2345, 537.051, -170.914 )
+
+[node name="box3" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -39.0099, -0.0110042, 80.9016, 4.07022, 0.759779, 1.46142, -224.506, 0.0156867, -14.0309, -11.6339, 554.731, -1.75458 )
+
+[node name="box4" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -0.264272, -0.133794, -80.8394, 227.897, -0.00590046, 0.0172828, -1.75016, -0.748125, 14.4571, -53.9185, 788.307, -224.646 )
+
+[node name="box5" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -12.793, -0.201575, -27.6901, 129.936, 0.308318, -5.59097, 64.1423, -0.664777, 5.80318, -75.9539, 1141.82, -160.489 )
+
+[node name="box6" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 119.454, -0.00683662, -2.62365, 1.69141, 0.75496, 6.60357, 5.27298, -0.0872916, 57.3178, 98.1433, 293.42, -496.348 )
+
+[node name="box7" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 112.014, 0.106056, -18.5456, -5.28637, 0.727291, 16.5707, 41.5322, -0.193466, 52.1275, 299.073, 278.018, -454.629 )
+
+[node name="box8" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 62.801, -0.0502411, -49.0019, 67.3471, 0.588569, 16.6495, 76.2906, -0.478213, 25.6398, 657.002, 428.682, -282.927 )
+
+[node name="box9" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -60.0296, 0.258655, -45.9212, 48.3396, 0.687852, 7.63359, 91.4295, -0.193849, -34.1863, 662.693, 541.855, -94.9883 )
+
+[node name="box10" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -17.713, 0.217463, -54.6757, 42.8684, 0.689835, 12.605, 110.218, -0.233358, -13.6895, 600.161, 621.005, 70.3474 )
+
+[node name="box11" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 79.5617, 2.19315, 5.87209, -11.9872, 14.5459, -1.39766, -2.85549, 0.0439698, 169.48, 296.224, 970.911, 5.93747 )
+
+[node name="box12" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -65.934, 0.675774, 1.80988, 129.121, 0.347082, -1.71903, -11.8793, 0.0218038, -28.7303, 198.909, 1140.71, -21.2912 )
+
+[node name="box13" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( -110.097, 0.263522, -10.3477, 43.2686, 0.7071, -3.39822, 17.4935, -0.0904408, -56.7193, 436.564, 718.994, 228.135 )
+
+[node name="box14" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 2.72449, 0.0977751, 57.26, 9.64204, 0.75105, -7.5132, -119.16, 0.0630083, 0.70126, 308.87, 1004.37, 62.1481 )
+
+[node name="box15" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 14.8156, -0.0124402, 57.3017, 118.59, 0.0270674, -7.11875, -3.98412, 0.759416, 1.19241, 291.786, 877.029, 185.168 )
+
+[node name="cylinder7" parent="zones/big_mountain" instance=ExtResource( 69 )]
+transform = Transform( 1.85113, -132.918, 31.9358, -40.6916, -58.3443, -48.566, 55.3991, -38.4135, -36.7396, 583.489, 278.375, -442.024 )
+
+[node name="box16" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 103.701, -0.260588, -20.8577, 46.2932, 0.699473, 3.22352, 37.4562, -0.143038, 53.7622, 483.217, 319.386, -395.534 )
+
+[node name="box17" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 147.203, 0.0588141, 1.63923, -0.721538, 12.0538, 0.220153, -1.86475, -0.0212666, 129.315, 10.8178, 1222.92, -3.91168 )
+
+[node name="cylinder8" parent="zones/big_mountain" instance=ExtResource( 14 )]
+transform = Transform( 182.796, -2.68812, 5.27856, 34.3024, 14.3902, -21.1199, -1.30167, 1.72219, 184.713, -284.095, 527.101, 182.009 )
+
+[node name="box18" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 36.6566, 0.376564, 206.854, 8.14845, 20.1381, -6.63459, -155.044, 1.1474, 48.557, -239.899, 675.727, 162.428 )
+
+[node name="box19" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 29.4547, -3.77642, 130.222, 9.06772, 19.8047, 23.3044, -95.6475, 0.714606, 42.3111, 73.1717, 706.312, 159.932 )
+
+[node name="box20" parent="zones/big_mountain" instance=ExtResource( 11 )]
+transform = Transform( 94.4354, -0.163648, 37.7612, 3.06522, 11.4357, -11.4695, -22.4467, 0.873122, 157.299, -10.1639, 520.122, 69.7862 )
+
+[node name="box21" parent="zones/big_mountain" instance=ExtResource( 55 )]
+transform = Transform( 105.697, -3.82685, -22.7933, 26.9048, 15.417, -3.02936, 25.1645, -0.409421, 98.9762, -332.828, 353.328, -36.1096 )
+
+[node name="box22" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 27.0308, -0.538659, -48.0419, 142.688, 0.247527, -0.546321, 33.3173, -0.623065, 41.3168, -163.166, 407.258, -338.303 )
+
+[node name="box23" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 87.4795, -0.414216, -23.6631, 69.9674, 0.615849, -1.91771, 41.8626, -0.163723, 52.6535, -558.581, -40.9052, -317.386 )
+
+[node name="box24" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 99.8688, -0.399489, -9.36358, 65.7235, 0.615174, 11.9497, 2.68731, -0.199038, 55.7269, -404.618, 83.3512, -289.372 )
+
+[node name="box25" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 72.279, -0.260052, 41.5531, 74.0871, 0.584929, -8.9214, -59.8931, 0.40972, 39.1105, -302.851, 197.513, -389.307 )
+
+[node name="box26" parent="zones/big_mountain" instance=ExtResource( 4 )]
+transform = Transform( 113.854, -0.0867505, 16.3862, 12.4312, 0.75492, 2.93168, -34.392, -0.0143145, 55.3058, -129.928, 280.938, -464.393 )
+
+[node name="ground_mountain000" parent="zones/big_mountain" instance=ExtResource( 38 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -510.335, -17.1323, -31.2983 )
+
+[node name="ground_mountain001" parent="zones/big_mountain" instance=ExtResource( 33 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 12.7086, -350.422, 760.349 )
+
+[node name="ground_mountain002" parent="zones/big_mountain" instance=ExtResource( 50 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 220.216, -132.152, 581.625 )
+
+[node name="ground_mountain003" parent="zones/big_mountain" instance=ExtResource( 77 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 15.4895, 1382.86, -54.405 )
+
+[node name="ground_mountain004" parent="zones/big_mountain" instance=ExtResource( 39 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -168.871, 913.246, -165.214 )
+
+[node name="ground_mountain005" parent="zones/big_mountain" instance=ExtResource( 34 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 134.993, 963.228, -174.073 )
+
+[node name="ground_mountain006" parent="zones/big_mountain" instance=ExtResource( 37 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 145.628, 1050.49, 142.1 )
+
+[node name="ground_mountain007" parent="zones/big_mountain" instance=ExtResource( 84 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -111.91, 1157.37, 186.171 )
+
+[node name="ground_mountain008" parent="zones/big_mountain" instance=ExtResource( 68 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -347.876, 863.64, 34.188 )
+
+[node name="ground_mountain009" parent="zones/big_mountain" instance=ExtResource( 70 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -348.095, 686.048, -141.71 )
+
+[node name="ground_mountain010" parent="zones/big_mountain" instance=ExtResource( 40 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -103.552, 842.336, 430.522 )
+
+[node name="ground_mountain011" parent="zones/big_mountain" instance=ExtResource( 71 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -364.059, 624.857, 258.967 )
+
+[node name="ground_mountain012" parent="zones/big_mountain" instance=ExtResource( 53 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -160.59, 428.57, 437.119 )
+
+[node name="ground_mountain013" parent="zones/big_mountain" instance=ExtResource( 72 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 182.736, 773.688, 390.01 )
+
+[node name="ground_mountain014" parent="zones/big_mountain" instance=ExtResource( 51 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 319.484, 713.638, 187.336 )
+
+[node name="ground_mountain015" parent="zones/big_mountain" instance=ExtResource( 41 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 821.524, 467.153, -26.2063 )
+
+[node name="ground_mountain016" parent="zones/big_mountain" instance=ExtResource( 42 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 699.655, 559.511, -52.9465 )
+
+[node name="ground_mountain017" parent="zones/big_mountain" instance=ExtResource( 78 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 600.984, 305.834, -350.395 )
+
+[node name="ground_mountain018" parent="zones/big_mountain" instance=ExtResource( 73 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 370.339, 117.855, -279.111 )
+
+[node name="ground_mountain019" parent="zones/big_mountain" instance=ExtResource( 52 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 445.865, 130.006, 14.403 )
+
+[node name="ground_mountain020" parent="zones/big_mountain" instance=ExtResource( 80 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 521.259, 100.283, 134.4 )
+
+[node name="ground_mountain021" parent="zones/big_mountain" instance=ExtResource( 79 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -325.796, 109.117, 292.793 )
+
+[node name="ground_mountain022" parent="zones/big_mountain" instance=ExtResource( 43 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -49.3856, 144.355, 485.824 )
+
+[node name="ground_mountain023" parent="zones/big_mountain" instance=ExtResource( 35 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 180.16, 269.261, 392.078 )
+
+[node name="ground_mountain024" parent="zones/big_mountain" instance=ExtResource( 54 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 336.374, 445.392, 344.391 )
+
+[node name="ground_mountain025" parent="zones/big_mountain" instance=ExtResource( 44 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 505.973, 213.909, 242.524 )
+
+[node name="ground_mountain026" parent="zones/big_mountain" instance=ExtResource( 36 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 580.065, 473.841, 273.603 )
+
+[node name="ground_mountain027" parent="zones/big_mountain" instance=ExtResource( 45 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 501.098, 612.646, 225.694 )
+
+[node name="ground_mountain028" parent="zones/big_mountain" instance=ExtResource( 81 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 487.168, 640.818, -118.701 )
+
+[node name="ground_mountain029" parent="zones/big_mountain" instance=ExtResource( 82 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 321.771, 439.297, -275.871 )
+
+[node name="ground_mountain030" parent="zones/big_mountain" instance=ExtResource( 58 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 273.313, 95.5182, -472.502 )
+
+[node name="ground_mountain031" parent="zones/big_mountain" instance=ExtResource( 46 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, 16.8319, 212.955, -467.382 )
+
+[node name="ground_mountain032" parent="zones/big_mountain" instance=ExtResource( 85 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -137.631, 318.327, -242.476 )
+
+[node name="ground_mountain033" parent="zones/big_mountain" instance=ExtResource( 56 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -524.886, -109.971, -285.52 )
+
+[node name="ground_mountain034" parent="zones/big_mountain" instance=ExtResource( 57 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -239.988, 66.9792, -489.03 )
+
+[node name="ground_mountain035" parent="zones/big_mountain" instance=ExtResource( 63 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -307.822, 134.03, -307.424 )
+
+[node name="ground_mountain036" parent="zones/big_mountain" instance=ExtResource( 49 )]
+transform = Transform( -0.443099, -0.896461, -0.00458885, 0.883682, -0.43591, -0.170555, 0.150896, -0.0796279, 0.985336, -389.595, 205.004, -60.3141 )
+
+[node name="lighthouse" type="Spatial" parent="zones"]
+transform = Transform( 0.99933, 0.0365869, -6.14227e-07, 0.00886373, -0.242119, -0.970206, -0.035497, 0.969557, -0.242281, 36.5818, -242.106, 969.495 )
+
+[node name="grab_bar" parent="zones/lighthouse" instance=ExtResource( 19 )]
+transform = Transform( 0.999826, -0.0184886, 0.00631067, 0.0186278, 0.997278, -0.172381, -0.00128566, 0.0713803, 2.41003, -32.2082, 142.293, 87.7876 )
+
+[node name="grab_bar2" parent="zones/lighthouse" instance=ExtResource( 19 )]
+transform = Transform( 0.999826, -0.0184886, 0.00631067, 0.0186278, 0.997278, -0.172381, -0.00128566, 0.0713803, 2.41003, -31.7022, 124.351, 86.4091 )
+
+[node name="grab_bar3" parent="zones/lighthouse" instance=ExtResource( 19 )]
+transform = Transform( 0.999826, -0.0184886, 0.00631067, 0.0186278, 0.997278, -0.172381, -0.00128566, 0.0713803, 2.41003, -31.2902, 109.738, 85.2853 )
+
+[node name="grab_bar4" parent="zones/lighthouse" instance=ExtResource( 19 )]
+transform = Transform( 0.999826, -0.0184886, 0.00631067, 0.0186278, 0.997278, -0.172381, -0.00128566, 0.0713803, 2.41003, -30.8029, 92.4582, 83.959 )
+
+[node name="grab_bar5" parent="zones/lighthouse" instance=ExtResource( 19 )]
+transform = Transform( 0.999826, -0.0184886, 0.00631067, 0.0186278, 0.997278, -0.172381, -0.00128566, 0.0713803, 2.41003, -30.3533, 76.5117, 82.7335 )
+
+[node name="cylinder" parent="zones/lighthouse" instance=ExtResource( 69 )]
+transform = Transform( 68.1509, -0.653935, -24.4581, 8.14851, 7.02005, 2.84901, 24.0216, -0.526056, 68.4227, -96.2753, 33.5856, -77.4481 )
+
+[node name="box" parent="zones/lighthouse" instance=ExtResource( 75 )]
+transform = Transform( 64.7128, 0.0165502, -37.3585, -0.977174, 6.35888, -0.945472, 43.2945, 0.118785, 55.8189, 3.32078, 41.9935, 17.8401 )
+
+[node name="cylinder2" parent="zones/lighthouse" instance=ExtResource( 69 )]
+transform = Transform( 72.4133, -0.539323, -19.7169, 0.815361, 12.6671, -9.01312, 19.9542, 1.43959, 71.9203, -44.2221, 40.5529, 114.879 )
+
+[node name="box2" parent="zones/lighthouse" instance=ExtResource( 75 )]
+transform = Transform( 50.5249, 1.49626, -83.5112, -12.9962, 7.21355, 15.8775, 87.7967, 0.206732, 50.409, 197.139, 21.6939, 16.2805 )
+
+[node name="cylinder3" parent="zones/lighthouse" instance=ExtResource( 69 )]
+transform = Transform( 13.2049, -2.00809, 0.0473084, 0.375521, 70.8088, -1.29382, -0.0105612, 6.97579, 13.1467, -31.9056, 125.115, 110.834 )
+
+[node name="sphere" parent="zones/lighthouse" instance=ExtResource( 83 )]
+transform = Transform( 86.4531, 0.766769, -3.07062, 3.16491, -20.9463, 83.8772, -4.25408e-05, -83.9334, -20.9603, 88.9586, -13.9641, 85.246 )
+
+[node name="ground_ligthhouse000" parent="zones/lighthouse" instance=ExtResource( 59 )]
+transform = Transform( 0.99933, 0.00886325, -0.0354941, 0.0365839, -0.242122, 0.969556, -4.91738e-07, -0.970204, -0.242285, -369.989, -92.0403, 17.5148 )
+
+[node name="ground_ligthhouse001" parent="zones/lighthouse" instance=ExtResource( 60 )]
+transform = Transform( 0.99933, 0.00886325, -0.0354941, 0.0365839, -0.242122, 0.969556, -4.91738e-07, -0.970204, -0.242285, -43.9425, -41.278, 64.2366 )
+
+[node name="ground_ligthhouse002" parent="zones/lighthouse" instance=ExtResource( 74 )]
+transform = Transform( 0.99933, 0.00886325, -0.0354941, 0.0365839, -0.242122, 0.969556, -4.91738e-07, -0.970204, -0.242285, 50.5667, -52.4216, -167.476 )
+
+[node name="bridge" type="Spatial" parent="zones"]
+transform = Transform( 0.912828, 0.406927, -0.0339989, 0.149704, -0.410956, -0.89928, -0.379913, 0.815798, -0.43605, 404.312, -408.315, 810.551 )
+
+[node name="box" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 13.0685, 2.62681, 11.4001, 0.317913, 29.8886, -2.64587, -11.4955, 3.81283, 12.8869, 118.657, 43.946, 185.578 )
+
+[node name="box2" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 13.0685, 2.62681, 11.4001, 0.317913, 29.8886, -2.64587, -11.4955, 3.81283, 12.8869, 92.6298, 36.8189, 178.899 )
+
+[node name="box3" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 13.0685, 2.62681, 11.4001, 0.317913, 29.8886, -2.64587, -11.4955, 3.81283, 12.8869, 81.0978, 30.9194, 158.302 )
+
+[node name="box4" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 13.0685, 2.62681, 11.4001, 0.317913, 29.8886, -2.64587, -11.4955, 3.81283, 12.8869, 89.6624, 26.6354, 130.146 )
+
+[node name="box5" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 12.9225, 2.90155, 11.5435, 0.0162253, 29.929, -2.51025, -11.6637, 3.25634, 12.7858, 98.0672, 17.9749, 110.056 )
+
+[node name="box6" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 12.5832, 0.886888, 12.0182, 0.0235365, 30.2161, -0.7633, -12.0291, 0.986862, 12.5703, 26.7531, 28.2516, 30.716 )
+
+[node name="box7" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 12.851, -1.06555, 11.7264, -0.0254816, 30.2012, 0.937032, -11.7424, -1.23169, 12.8315, -36.0467, 28.0633, -41.663 )
+
+[node name="box8" parent="zones/bridge" instance=ExtResource( 62 )]
+transform = Transform( 12.763, -3.10795, 11.7021, -0.0362875, 29.8874, 2.66911, -11.838, -3.44242, 12.6084, -105.12, 17.317, -116.433 )
+
+[node name="box9" parent="zones/bridge" instance=ExtResource( 61 )]
+transform = Transform( 8.56646, -0.146908, 28.4683, 0.0112621, 2.14891, 4.35652, -7.62405, -0.161893, 31.9937, -71.4175, 51.1069, -78.7028 )
+
+[node name="box10" parent="zones/bridge" instance=ExtResource( 61 )]
+transform = Transform( 8.56675, -0.00638954, 28.617, 0.00601573, 2.15998, 0.16617, -7.62372, -0.00547551, 32.1569, -3.10486, 56.014, -2.66074 )
+
+[node name="box11" parent="zones/bridge" instance=ExtResource( 61 )]
+transform = Transform( 8.5665, 0.132999, 28.4952, -0.00702631, 2.15085, -3.95735, -7.624, 0.147458, 32.0215, 64.594, 51.0482, 71.6172 )
+
+[node name="palace" type="Spatial" parent="zones"]
+transform = Transform( -0.612197, 0.707584, -0.3529, -0.790705, -0.547843, 0.273229, -1.35601e-06, 0.44631, 0.894878, 707.777, -547.986, 446.43 )
+
+[node name="cylinder" parent="zones/palace" instance=ExtResource( 69 )]
+transform = Transform( 68.5298, 9.70792, -129.749, 29.3992, 44.6278, 47.8659, 129.936, -15.2176, 57.6014, 251.812, 157.322, -394.724 )
+
+[node name="cylinder2" parent="zones/palace" instance=ExtResource( 69 )]
+transform = Transform( 50.9985, 2.56492, -100.188, -6.98271, 21.4062, 11.5597, 100.848, 0.185089, 51.4651, 142.092, 185.613, 10.2549 )
+
+[node name="box" parent="zones/palace" instance=ExtResource( 75 )]
+transform = Transform( -35.4191, 1.28221, -156.37, 25.8949, 16.0987, 4.12945, 125.088, -2.96957, -45.1314, 94.6759, 188.377, -219.258 )
+
+[node name="box2" parent="zones/palace" instance=ExtResource( 75 )]
+transform = Transform( 106.268, -0.611148, 49.7803, -1.88136, 10.9885, 60.2161, -26.4978, -3.23117, 195.366, -228.018, 378.454, -502.445 )
+
+[node name="box3" parent="zones/palace" instance=ExtResource( 4 )]
+transform = Transform( -5.58872, 0.185171, 79.6227, 217.223, 0.226701, -4.17583, -68.7343, 0.701395, -19.6711, -184.731, 261.472, -235.101 )
+
+[node name="box4" parent="zones/palace" instance=ExtResource( 4 )]
+transform = Transform( -47.1576, -0.113825, 79.3981, -64.7769, 0.725663, 7.15061, -213.357, -0.195159, -19.7201, -236.843, 406.621, -516.943 )
+
+[node name="box5" parent="zones/palace" instance=ExtResource( 64 )]
+transform = Transform( -40.7069, 2.32208, -0.00173837, -2.65176, -4.87528, -1.78462, -6.71316, -12.1547, 0.715481, -78.4478, 104.112, 187.252 )
+
+[node name="box6" parent="zones/palace" instance=ExtResource( 64 )]
+transform = Transform( -40.707, 0.938282, 0.307044, -2.65167, 9.37101, -1.35881, -6.71286, -9.39144, -1.32518, -81.7844, 100.192, 207.356 )
+
+[node name="box7" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( 2.41331, -1.42558, 1.9187, 3.72199, 13.602, 0.155526, -19.9147, 2.3694, 0.261579, -113.251, 80.3005, 188.23 )
+
+[node name="box8" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( 2.44485, -0.920408, 1.92439, 3.4186, 13.6693, 0.0886943, -19.9652, 2.22785, 0.250838, -43.9607, 83.0525, 199.172 )
+
+[node name="box9" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( -34.9057, -0.965371, 0.30464, -1.56717, 13.671, 0.343165, -5.58366, 2.19785, -2.00074, -76.6538, 85.286, 174.522 )
+
+[node name="box10" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( -12.1717, -0.742517, 0.281899, -0.285515, 13.5925, 0.386855, -1.90191, 2.71139, -1.86215, -58.9413, 78.7365, 215.236 )
+
+[node name="box11" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( -12.1334, -1.31585, 0.281877, -0.79037, 13.5669, 0.386987, -2.00093, 2.62028, -1.86213, -104.41, 76.2366, 207.913 )
+
+[node name="box12" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( 27.0134, -11.1353, -3.81594, 2.01161, 53.7933, -1.07646, 36.2618, 5.3111, 2.90242, -225.932, 100.557, 110.754 )
+
+[node name="box13" parent="zones/palace" instance=ExtResource( 32 )]
+transform = Transform( 44.4953, -7.83052, 0.570354, 6.97557, 54.2262, -0.512051, -4.49287, 6.64111, 4.85352, -160.143, 108.723, 135.819 )
+
+[node name="box14" parent="zones/palace" instance=ExtResource( 75 )]
+transform = Transform( -115.298, -0.159841, -15.1083, -4.53211, 4.73472, 2.44407, 19.3608, 0.156451, -89.4013, -39.7441, 177.046, 38.9009 )
+
+[node name="cylinder3" parent="zones/palace" instance=ExtResource( 69 )]
+transform = Transform( -61.58, -1.08908, 60.4425, -5.79286, 6.88046, 13.5162, -61.6888, 0.441049, -61.6051, -184.656, 166.329, 74.7797 )
+
+[node name="box15" parent="zones/palace" instance=ExtResource( 75 )]
+transform = Transform( -87.2052, -0.27508, 9.6414, -2.71331, 4.40526, 18.034, -11.8086, 1.01922, -75.3444, -65.74, 52.5413, 243.581 )
+
+[node name="cylinder4" parent="zones/palace" instance=ExtResource( 69 )]
+transform = Transform( -45.1436, -0.694186, 40.9847, 1.92403, 3.57391, 18.6905, -42.5202, 0.898735, -42.6676, -201.958, 39.4825, 261.465 )
+
+[node name="cylinder5" parent="zones/palace" instance=ExtResource( 69 )]
+transform = Transform( -45.3671, 0.21388, 42.1771, 14.2717, 3.59532, 10.3601, -39.8466, 1.04421, -44.3099, 62.1001, 43.6121, 303.18 )
+
+[node name="forest" type="Spatial" parent="zones"]
+transform = Transform( 0.926127, 0.377213, -1.42577e-07, -0.311895, 0.765759, -0.562436, -0.212158, 0.520887, 0.826841, 377.684, 766.715, 521.537 )
+
+[node name="box" parent="zones/forest" instance=ExtResource( 75 )]
+transform = Transform( 12.9149, 0.980685, 0.412414, -2.39627, 5.17164, -1.0126, -0.661633, 0.4124, 11.7176, 210.607, 69.4653, 109.964 )
+
+[node name="box2" parent="zones/forest" instance=ExtResource( 75 )]
+transform = Transform( 12.9149, 1.80909, 0.412419, -2.39627, 9.54025, -1.01257, -0.661633, 0.760744, 11.7176, 227.949, 72.9491, 83.6288 )
+
+[node name="box3" parent="zones/forest" instance=ExtResource( 75 )]
+transform = Transform( 23.7928, 0.185739, 0.801143, -4.42484, 0.97949, -2.28531, -1.09043, 0.0781049, 26.7542, 202.485, 66.5463, 85.1461 )
+
+[node name="cylinder" parent="zones/forest" instance=ExtResource( 69 )]
+transform = Transform( 24.8192, 0.106104, 0.765255, -2.58608, 0.991774, -1.87885, -0.958317, 0.0716046, 24.8894, 120.305, 113.775, 77.8015 )
+
+[node name="cylinder2" parent="zones/forest" instance=ExtResource( 69 )]
+transform = Transform( 24.8192, 0.106104, 0.765255, -2.58608, 0.991774, -1.87885, -0.958317, 0.0716046, 24.8894, 118.409, 96.1869, 76.5751 )
+
+[node name="box4" parent="zones/forest" instance=ExtResource( 75 )]
+transform = Transform( 24.0769, 0.105935, 0.842305, -2.50175, 0.99167, -2.06802, -0.95081, 0.0732731, 26.7706, 284.072, 50.8376, 81.5637 )
+
+[node name="cylinder3" parent="zones/forest" instance=ExtResource( 69 )]
+transform = Transform( 2.36944, 0.325129, 0.303878, -0.00629908, 40.9735, -0.0996487, -0.304402, 1.6829, 2.36743, 8.5413, 75.2946, 44.215 )
+
+[node name="cylinder4" parent="zones/forest" instance=ExtResource( 69 )]
+transform = Transform( 2.35042, 5.45004, 0.309542, -0.289793, 43.8812, -0.0545035, -0.313893, 0.297557, 2.36816, 134.931, 85.1775, 7.36227 )
+
+[node name="cylinder5" parent="zones/forest" instance=ExtResource( 69 )]
+transform = Transform( 2.3591, 3.17303, 0.293159, -0.208719, 31.8507, -0.227395, -0.313164, 2.67483, 2.35995, 106.113, 63.9115, 89.4509 )
+
+[node name="castle" type="Spatial" parent="zones"]
+transform = Transform( -0.484904, -0.857589, -0.171487, 0.874567, -0.475491, -0.0950816, 4.69387e-07, -0.196082, 0.980588, -845.994, -469.065, -193.431 )
+
+[node name="box" parent="zones/castle" instance=ExtResource( 61 )]
+transform = Transform( -25.1943, -0.34001, 10.3997, -0.1091, 20.0701, 0.777675, -11.7662, 0.541946, -22.2753, -21.3982, 276.802, 34.1133 )
+
+[node name="cylinder" parent="zones/castle" instance=ExtResource( 47 )]
+transform = Transform( 9.03528, -3.45573, -0.078854, 0.58049, 52.4307, -0.963248, 0.14124, 5.57921, 9.00329, -76.778, 178.4, 123.956 )
+
+[node name="cylinder2" parent="zones/castle" instance=ExtResource( 47 )]
+transform = Transform( 9.04698, 2.19552, -0.0616268, -0.37945, 52.6821, -0.587113, 0.037048, 3.43809, 9.03574, 48.8062, 184.649, 76.4283 )
+
+[node name="cylinder3" parent="zones/castle" instance=ExtResource( 47 )]
+transform = Transform( 9.05498, -0.09945, -0.0143158, 0.0177753, 52.7659, 0.478578, 0.0133951, -2.79286, 9.04234, -2.21146, 187.265, -62.1255 )
+
+[node name="cylinder4" parent="zones/castle" instance=ExtResource( 47 )]
+transform = Transform( 8.99811, -5.79976, -0.198446, 0.995703, 52.5176, 0.0738399, 0.189131, -0.555517, 9.05253, -128.773, 179.577, -12.3345 )
+
+[node name="box2" parent="zones/castle" instance=ExtResource( 48 )]
+transform = Transform( 58.3781, -0.557984, 26.6529, 8.26326, 3.80917, 4.54158, -26.8434, -0.0408977, 59.3619, -162.018, 119.562, -11.8754 )
+
+[node name="box3" parent="zones/castle" instance=ExtResource( 48 )]
+transform = Transform( 59.1043, 0.0338004, 26.7005, -2.49544, 3.83916, 4.20517, -26.4064, -0.287151, 59.3653, 9.83969, 131.015, -83.5807 )
+
+[node name="box4" parent="zones/castle" instance=ExtResource( 48 )]
+transform = Transform( 82.1966, -0.175459, 33.7135, 3.65896, 5.12514, -1.17116, -31.7079, 0.136576, 87.2604, -41.9065, 237.589, 32.6163 )
+
+[node name="box5" parent="zones/castle" instance=ExtResource( 48 )]
+transform = Transform( 83.898, 0.0177824, 23.3992, 3.84167, 3.8189, -7.58337, -33.0926, 0.488414, 58.4424, -4.73453, 121.624, 132.879 )
+
+[node name="vilage" type="Spatial" parent="zones"]
+transform = Transform( 0.391941, 0.90631, 0.158063, -0.91999, 0.386113, 0.0673384, -7.26432e-07, -0.171809, 0.98513, 921.153, 392.433, -174.622 )
+
+[node name="box" parent="zones/vilage" instance=ExtResource( 65 )]
+transform = Transform( 1.98291, 0.506548, 0.0221581, -0.0618695, 16.2173, -0.856565, -0.00275107, 0.393929, 35.2347, 32.0793, 10.6237, 24.9466 )
+
+[node name="box2" parent="zones/vilage" instance=ExtResource( 65 )]
+transform = Transform( 0.622356, 0.061284, 28.1318, -0.0308948, 16.2266, 0.151946, -1.39106, -0.332966, 12.5827, 3.88995, 13.9975, -21.1431 )
+
+[node name="box3" parent="zones/vilage" instance=ExtResource( 66 )]
+transform = Transform( 3.71972, 0.582715, 0.00775632, -0.0720986, 29.7185, -0.247251, -0.0125741, 1.97817, 3.71222, 20.4173, 24.9293, 69.3131 )
+
+[node name="cylinder" parent="zones/vilage" instance=ExtResource( 69 )]
+transform = Transform( 0.641823, -0.332182, -0.00331765, 0.0239733, 8.83809, -0.0231205, 0.004181, 0.31664, 0.64186, -38.9901, 3.10938, 16.4837 )
+
+[node name="cylinder2" parent="zones/vilage" instance=ExtResource( 69 )]
+transform = Transform( 0.641823, -0.332182, -0.00331765, 0.0239733, 8.83809, -0.0231205, 0.004181, 0.31664, 0.64186, -39.0557, 2.48956, 35.4908 )
+
+[node name="grab_bar" parent="zones/vilage" instance=ExtResource( 19 )]
+transform = Transform( 0.99884, -0.047635, -0.0125065, 0.0474308, 0.998512, -0.0480662, 0.00827204, 0.0265429, 1.78575, -39.3983, 7.94916, 26.1925 )
+
+[node name="box4" parent="zones/vilage" instance=ExtResource( 55 )]
+transform = Transform( 92.1734, 2.4886, 3.44613, -13.2437, 17.2389, -2.09817, -3.66909, 0.2931, 94.1457, 142.16, -31.6121, 16.743 )
+
+[node name="ground_forest000" parent="zones/vilage" instance=ExtResource( 67 )]
+transform = Transform( 0.391937, -0.919992, -1.07643e-07, 0.906312, 0.386109, -0.171809, 0.158063, 0.0673384, 0.98513, -186.715, -222.768, 542.764 )
+
+[node name="ground_forest001" parent="zones/vilage" instance=ExtResource( 76 )]
+transform = Transform( 0.391937, -0.919992, -1.07643e-07, 0.906312, 0.386109, -0.171809, 0.158063, 0.0673384, 0.98513, -57.2576, -60.251, -18.7593 )
+
+[node name="hills" type="Spatial" parent="zones"]
+transform = Transform( 0.993217, -0.116277, 0, 0.116277, 0.993217, 0, 0, 0, 1, -116.936, 998.851, 0 )
+
+[node name="ground_meadow000" parent="zones/hills" instance=ExtResource( 87 )]
+
+[node name="ground_meadow001" parent="zones/hills" instance=ExtResource( 88 )]
+
+[node name="ground_meadow002" parent="zones/hills" instance=ExtResource( 89 )]
+
+[node name="box" parent="zones/hills" instance=ExtResource( 75 )]
+transform = Transform( 81.4463, -0.782799, -1.17255, 4.02379, 15.3666, -3.95716, 1.89201, 1.01696, 58.8915, -51.1523, -1.55316, 66.4529 )
+
+[node name="cylinder" parent="zones/hills" instance=ExtResource( 69 )]
+transform = Transform( 23.9229, 0.313272, 0.159624, -0.292254, 25.688, 0.0745731, -0.158701, -0.0821595, 23.9247, 12.4641, 16.3602, -3.26883 )
+
+[node name="cylinder2" parent="zones/hills" instance=ExtResource( 69 )]
+transform = Transform( 60.5806, -3.60536, 0.0919767, 5.42227, 40.2657, 0.785659, -0.161664, -0.51471, 60.8179, -85.2284, 23.5685, -16.4379 )
+
+[node name="box2" parent="zones/hills" instance=ExtResource( 75 )]
+transform = Transform( 46.8313, 23.0164, -21.1523, -21.4176, 88.2385, -20.3784, 14.0324, 57.8638, 39.4895, -245.598, 50.4481, 17.4112 )
+
+[node name="desert" type="Spatial" parent="zones"]
+transform = Transform( 1, 2.53518e-06, 2.53518e-06, 2.53518e-06, -1, 0, 2.53518e-06, 6.42715e-12, -1, 0, -1055.7, 0 )
+
+[node name="box" parent="zones/desert" instance=ExtResource( 32 )]
+transform = Transform( 99.4847, -6.93163, -13.6895, 85.694, 7.98931, -16.3422, 19.5894, 0.252976, 141.012, 276.092, 368.001, 63.3185 )
+
+[node name="box2" parent="zones/desert" instance=ExtResource( 32 )]
+transform = Transform( 82.0096, 6.88288, 20.0566, -78.3315, 6.43114, 32.6115, 12.6007, -4.81736, 72.1923, 450.811, 354.222, -113.118 )
+
+[node name="box3" parent="zones/desert" instance=ExtResource( 32 )]
+transform = Transform( 49.7892, 2.7204, 3.40436e-08, -7.56874, 17.8933, 0.534521, 0.0851799, -0.201374, 47.4954, 196.283, -46.9485, -54.6206 )
+
+[node name="box4" parent="zones/desert" instance=ExtResource( 91 )]
+transform = Transform( 63.3388, 1.10045, -0.114612, -5.79278, 12.0159, -3.09951, -0.165302, 0.577563, 64.702, 91.4426, -57.2265, 47.993 )
+
+[node name="ground_desert000" parent="zones/desert" instance=ExtResource( 90 )]
+transform = Transform( 1, 2.53518e-06, 2.53518e-06, 2.53518e-06, -1, 0, 2.53518e-06, 6.42715e-12, -1, -197.997, -137.828, -166.37 )
+
+[node name="ground_desert001" parent="zones/desert" instance=ExtResource( 86 )]
+transform = Transform( 1, 2.53518e-06, 2.53518e-06, 2.53518e-06, -1, 0, 2.53518e-06, 6.42715e-12, -1, -771.519, -356.941, -89.597 )

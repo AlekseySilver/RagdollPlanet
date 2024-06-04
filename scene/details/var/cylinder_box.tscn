@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://geometry/cylinder32.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://texture/box_nm.dds" type="Texture" id=2]
+[ext_resource path="res://texture/box.dds" type="Texture" id=3]
+
+[sub_resource type="CylinderShape" id=4]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
+uv1_scale = Vector3( 3, 2, 1 )
+uv1_offset = Vector3( 1, 2, 0 )
+
+[node name="box" type="StaticBody"]
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
+
+[node name="mesh_instance" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 3 )

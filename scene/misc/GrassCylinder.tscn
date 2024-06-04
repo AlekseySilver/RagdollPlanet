@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://material/grass.material" type="Material" id=1]
+[ext_resource path="res://geometry/cylinder_mesh.tres" type="ArrayMesh" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+
+[node name="grass_barrel" type="StaticBody"]
+
+[node name="barrel_shape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="mesh" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )

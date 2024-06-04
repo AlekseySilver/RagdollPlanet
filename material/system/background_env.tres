@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://shader/background.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/camera_xform = Transform( 11, -1, 0, 1, 2, 1, -1, 1, 0, 0, 0, 0 )
+shader_param/par1 = Transform( 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shader_param/day_color = Color( 0.345098, 0.470588, 1, 1 )
+shader_param/night_color = Color( 0, 0, 0, 1 )
+shader_param/sun_color = Color( 1, 0.411765, 0.0196078, 1 )

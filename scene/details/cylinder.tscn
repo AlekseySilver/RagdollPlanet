@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://material/snow.material" type="Material" id=1]
+[ext_resource path="res://geometry/cylinder32.mesh" type="ArrayMesh" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+
+[node name="cylinder" type="StaticBody"]
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="mesh_instance" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )

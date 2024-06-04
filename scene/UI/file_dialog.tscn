@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/UI/AUIFileDialog.cs" type="Script" id=1]
+
+[node name="file_dialog" type="FileDialog"]
+anchor_left = 0.016
+anchor_top = 0.047
+anchor_right = 0.977
+anchor_bottom = 0.958
+margin_left = -0.384001
+margin_top = -0.200001
+margin_right = -0.448059
+margin_bottom = 0.199951
+window_title = "Сохранить файл"
+access = 2
+current_dir = "/SAVES/godot/RT5/RT5"
+current_path = "/SAVES/godot/RT5/RT5/"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

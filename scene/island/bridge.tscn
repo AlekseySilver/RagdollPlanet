@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=3]
+
+[node name="bridge" type="Spatial"]
+
+[node name="node" type="Node" parent="."]
+script = ExtResource( 3 )
+files = PoolStringArray( "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/cylinder_brick.tscn", "res://scene/details/var/box_brick.tscn", "res://scene/details/var/box_brick.tscn", "res://scene/details/var/box_brick.tscn" )
+positions = PoolVector3Array( 118.657, 43.946, 185.578, 92.6298, 36.8189, 178.899, 81.0978, 30.9194, 158.302, 89.6624, 26.6354, 130.146, 98.0672, 17.9749, 110.056, 26.7531, 28.2516, 30.716, -36.0467, 28.0633, -41.663, -105.12, 17.317, -116.433, -71.4175, 51.1069, -78.7028, -3.10486, 56.014, -2.66074, 64.594, 51.0482, 71.6172 )
+rotations = PoolVector3Array( 0.152584, 0.724258, 0.0184783, 0.152584, 0.724258, 0.0184783, 0.152584, 0.724258, 0.0184783, 0.152584, 0.724258, 0.0184783, 0.144707, 0.734379, 0.000941913, 0.0438622, 0.762948, 0.00135335, -0.053854, 0.74043, -0.00146593, -0.153935, 0.748139, -0.00210949, -0.101378, 0.727156, 0.000987135, -0.00386023, 0.727216, 0.00052458, 0.0920616, 0.727194, -0.000615305 )
+scales = PoolVector3Array( 17.4079, 30.2451, 17.4079, 17.4079, 30.2451, 17.4079, 17.4079, 30.2451, 17.4079, 17.4079, 30.2451, 17.4079, 17.4078, 30.2451, 17.4078, 17.408, 30.2452, 17.4078, 17.4078, 30.2451, 17.4079, 17.4079, 30.2451, 17.4079, 11.4678, 2.16, 43.0467, 11.4678, 2.16, 43.0468, 11.4678, 2.16, 43.0467 )

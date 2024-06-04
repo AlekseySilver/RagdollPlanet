@@ -1,0 +1,159 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://texture/UIico.dds" type="Texture" id=1]
+[ext_resource path="res://script/control/gamepad/AActionButton.cs" type="Script" id=2]
+[ext_resource path="res://script/control/gamepad/AActionControlCustom.cs" type="Script" id=3]
+[ext_resource path="res://script/control/gamepad/AGamepadPlay.cs" type="Script" id=4]
+[ext_resource path="res://script/control/gamepad/AActionJoystick.cs" type="Script" id=5]
+
+[node name="touch_gamepad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+joystick_ = NodePath("joystick")
+jump_button_ = NodePath("buttonA")
+kick_button_ = NodePath("buttonB")
+start_button_ = NodePath("button_start")
+select_button_ = NodePath("button_select")
+MU_button_ = NodePath("buttonMU")
+MD_button_ = NodePath("buttonMD")
+cam_control_ = NodePath("camera")
+
+[node name="button_start" type="Control" parent="."]
+anchor_left = 0.475586
+anchor_top = 0.823333
+anchor_right = 0.541016
+anchor_bottom = 0.918333
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="button_start"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[node name="buttonA" type="Control" parent="."]
+anchor_left = 0.859375
+anchor_top = 0.676667
+anchor_right = 0.927734
+anchor_bottom = 0.768333
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonA"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 128, 128, 128 )
+
+[node name="button_select" type="Control" parent="."]
+anchor_left = 0.399414
+anchor_top = 0.823333
+anchor_right = 0.461914
+anchor_bottom = 0.913333
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="button_select"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="buttonB" type="Control" parent="."]
+anchor_left = 0.780273
+anchor_top = 0.815
+anchor_right = 0.844727
+anchor_bottom = 0.908333
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonB"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 256, 128, 128 )
+
+[node name="buttonMU" type="Control" parent="."]
+anchor_left = 0.0488281
+anchor_top = 0.46
+anchor_right = 0.116211
+anchor_bottom = 0.555
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonMU"]
+position = Vector2( 32.452, 25.23 )
+rotation = 1.5708
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="buttonMD" type="Control" parent="."]
+anchor_left = 0.0488281
+anchor_top = 0.576667
+anchor_right = 0.113281
+anchor_bottom = 0.673333
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonMD"]
+position = Vector2( 32.452, 25.23 )
+rotation = -1.5708
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="joystick" type="Control" parent="."]
+anchor_left = 0.042
+anchor_top = 0.711
+anchor_right = 0.149
+anchor_bottom = 0.883
+script = ExtResource( 5 )
+
+[node name="spr_action_0" type="Sprite" parent="joystick"]
+position = Vector2( 50.54, 52.78 )
+scale = Vector2( 0.789688, 0.789688 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 128, 128, 128 )
+
+[node name="spr_action_round" type="Sprite" parent="joystick"]
+position = Vector2( 50.54, 52.78 )
+scale = Vector2( 0.79, 0.79 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 128, 128, 128 )
+
+[node name="camera" type="Control" parent="."]
+anchor_left = 0.12
+anchor_top = 0.19
+anchor_right = 0.88
+anchor_bottom = 0.8
+margin_left = -4.87999
+margin_top = -11.0
+margin_right = -4.88
+margin_bottom = -11.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

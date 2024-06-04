@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/UI/AUISelectItem.cs" type="Script" id=1]
+[ext_resource path="res://scene/UI/item_scroll.tscn" type="PackedScene" id=2]
+
+[node name="select_item_menu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.494118, 0.486275, 0.486275, 0.533333 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="main_scroll" type="ColorRect" parent="."]
+anchor_left = 0.02
+anchor_top = 0.03
+anchor_right = 0.757
+anchor_bottom = 0.971
+color = Color( 0.65098, 0.65098, 0.65098, 0.439216 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="item_scroll" parent="main_scroll" instance=ExtResource( 2 )]
+anchor_left = 0.031
+anchor_top = 0.034
+anchor_right = 0.973
+anchor_bottom = 0.964
+
+[node name="btn_cancel" type="Button" parent="."]
+anchor_left = 0.796
+anchor_top = 0.873
+anchor_right = 0.944
+anchor_bottom = 0.955
+text = "cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btn_cancel" to="." method="_on_btn_cancel_pressed"]

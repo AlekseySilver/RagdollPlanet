@@ -1,0 +1,156 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://script/UI/AUIEditMenu.cs" type="Script" id=1]
+[ext_resource path="res://scene/UI/item_scroll.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/UI/object_panel.tscn" type="PackedScene" id=3]
+
+[node name="select_menu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.494118, 0.486275, 0.486275, 0.533333 )
+script = ExtResource( 1 )
+
+[node name="main_scroll" type="ColorRect" parent="."]
+anchor_left = 0.02
+anchor_top = 0.03
+anchor_right = 0.2
+anchor_bottom = 0.971
+color = Color( 0.65098, 0.65098, 0.65098, 0.439216 )
+
+[node name="btn_play" type="Button" parent="main_scroll"]
+anchor_left = 0.038
+anchor_top = 0.046
+anchor_right = 0.944
+anchor_bottom = 0.115
+margin_left = -0.00416088
+margin_top = 0.0283966
+margin_right = 0.00190735
+margin_bottom = 0.0709915
+text = "play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_" type="Button" parent="main_scroll"]
+visible = false
+anchor_left = 0.038
+anchor_top = 0.174
+anchor_right = 0.944
+anchor_bottom = 0.243
+margin_left = -0.00416088
+margin_top = -0.24041
+margin_right = 0.00190735
+margin_bottom = -0.197815
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_save" type="Button" parent="main_scroll"]
+anchor_left = 0.038
+anchor_top = 0.815
+anchor_right = 0.944
+anchor_bottom = 0.884
+margin_left = -0.00416183
+margin_top = -0.110352
+margin_right = 0.00190735
+margin_bottom = -0.0677795
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_load" type="Button" parent="main_scroll"]
+anchor_top = 0.918
+anchor_right = 0.952
+anchor_bottom = 0.987
+margin_left = 8.41422
+margin_top = -0.281433
+margin_right = -0.0584412
+margin_bottom = -0.238831
+text = "load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actions_item_scroll" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.243
+anchor_top = 0.248
+anchor_right = 0.389
+anchor_bottom = 0.852
+label = "Actions:"
+
+[node name="add_item_scroll" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.472
+anchor_top = 0.255
+anchor_right = 0.618
+anchor_bottom = 0.859
+margin_left = 0.503998
+margin_top = -0.200012
+margin_right = 0.503967
+margin_bottom = -0.200012
+label = "Add:"
+
+[node name="material_item_scroll" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.683102
+anchor_top = 0.255333
+anchor_right = 0.853023
+anchor_bottom = 0.858667
+margin_left = 0.503998
+margin_top = -0.200012
+margin_right = 0.503967
+margin_bottom = -0.200012
+__meta__ = {
+"_edit_use_anchors_": true
+}
+label = "Material:"
+
+[node name="object_panel" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.082
+anchor_bottom = 0.218
+margin_left = 0.128113
+margin_top = -0.10146
+margin_right = 0.160034
+margin_bottom = 0.298538
+
+[node name="file_path" type="LineEdit" parent="."]
+anchor_left = 0.227
+anchor_top = 0.903
+anchor_right = 0.908
+anchor_bottom = 0.953
+margin_left = -0.448013
+margin_top = 0.199951
+margin_right = 0.207947
+margin_bottom = 0.199951
+
+[node name="node_name" type="LineEdit" parent="."]
+anchor_left = 0.476
+anchor_top = 0.02
+anchor_right = 0.93
+anchor_bottom = 0.07
+margin_left = -0.424011
+margin_right = -0.320068
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_file_select" type="Button" parent="."]
+anchor_left = 0.918
+anchor_top = 0.895
+anchor_right = 0.965
+anchor_bottom = 0.955
+margin_left = -0.0320435
+margin_right = -0.160034
+text = "..."
+
+[node name="accept_dialog" type="AcceptDialog" parent="."]
+anchor_left = 0.102
+anchor_top = 0.144
+anchor_right = 0.906
+anchor_bottom = 0.816
+window_title = "Внимание!"
+
+[connection signal="pressed" from="main_scroll/btn_play" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="main_scroll/btn_save" to="." method="_on_btn_save_pressed"]
+[connection signal="pressed" from="main_scroll/btn_load" to="." method="_on_btn_load_pressed"]
+[connection signal="text_changed" from="node_name" to="." method="_on_node_name_text_changed"]
+[connection signal="pressed" from="btn_file_select" to="." method="_on_btn_file_select_pressed"]

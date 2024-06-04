@@ -1,0 +1,314 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://scene/Camera.tscn" type="PackedScene" id=1]
+[ext_resource path="res://material/env/ocean.tres" type="Material" id=2]
+[ext_resource path="res://script/scene/AScenePlay.cs" type="Script" id=3]
+[ext_resource path="res://scene/details/cylinder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/misc/GrassBlock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scene/misc/BrickBlock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/misc/PavingStoneBlock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/misc/RockBlock.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/misc/GrassCylinder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/details/LeafTree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/details/grab_bar.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scene/details/box.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scene/test/particles.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scene/trigger/trigger_dialog.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scene/person/NPC/NPC_Kassia.tscn" type="PackedScene" id=15]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_depth_begin = 100.0
+fog_depth_end = 1000.0
+ss_reflections_fade_in = 0.0375
+ss_reflections_fade_out = 1.6245
+ss_reflections_roughness = false
+dof_blur_far_distance = 150.0
+dof_blur_far_transition = 200.0
+dof_blur_near_distance = 1.29
+
+[sub_resource type="SpatialMaterial" id=9]
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id=10]
+material = SubResource( 9 )
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type spatial;
+render_mode blend_mix,depth_draw_opaque,cull_front,diffuse_burley,specular_schlick_ggx,unshaded,shadows_disabled,ambient_light_disabled,skip_vertex_transform;
+
+uniform sampler2D texture_albedo : hint_albedo;
+uniform float specular;
+uniform float metallic;
+uniform float roughness : hint_range(0,1);
+
+uniform mat4 par1;
+
+uniform vec4 day_color : hint_color;
+uniform vec4 day2_color : hint_color;
+uniform vec4 night_color : hint_color;
+uniform vec4 sun_color : hint_color;
+uniform vec4 dawn_color : hint_color;
+
+vec3 smoothmix(vec3 a, vec3 b, float low, float high, float t) {
+    return mix(a, b, smoothstep(low, high, t));
+}
+
+void vertex() {
+	//UV=UV*uv1_scale.xy+uv1_offset.xy;
+	VERTEX = mat3(MODELVIEW_MATRIX) * VERTEX;
+    //NORMAL = normalize((MODELVIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
+    // same as above for binormal and tangent, if normal mapping is used
+}
+
+void fragment() {
+	//vec2 base_uv = UV;
+	//vec4 albedo_tex = texture(texture_albedo,base_uv);
+	//ALBEDO = albedo.rgb * albedo_tex.rgb;
+	//METALLIC = metallic;
+	//ROUGHNESS = roughness;
+	//SPECULAR = specular;
+	
+	vec3 cam_dir = mat3(CAMERA_MATRIX) * -VIEW; //vec3 cam_dir = normalize(mat3(CAMERA_MATRIX) * VERTEX);
+	vec3 sun_dir = par1[0].xyz;
+	
+	//vec3 cam_pos = CAMERA_MATRIX[3].xyz;
+
+	float sun = dot(cam_dir, sun_dir) * -0.5 + 0.5;
+	float day = par1[1].x; //dot(normalize(cam_pos), sun_dir) * -0.5 + 0.5;
+	
+	vec3 col = mix(day_color.rgb, day2_color.rgb, sun);
+	
+	vec3 dawn = night_color.rgb; //smoothmix(night_color.rgb, dawn_color.rgb, 0.8, 1.0, sun * (1.0 - day));
+	
+	col = mix(dawn, col, day);
+	
+	
+	///// sun
+    col = smoothmix(col, sun_color.rgb, .995, .997, sun);
+	//col = mix(col, sun_color.rgb, step(.90, sun));
+	
+	//col = vec3(sun);
+	
+	ALBEDO = col;
+	
+}
+
+
+"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/specular = 0.5
+shader_param/metallic = 0.0
+shader_param/roughness = 1.0
+shader_param/par1 = Transform( 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 )
+shader_param/day_color = Color( 0.196078, 0.305882, 1, 1 )
+shader_param/day2_color = Color( 0.423529, 0.541176, 1, 1 )
+shader_param/night_color = Color( 0, 0, 0, 1 )
+shader_param/sun_color = Color( 1, 0.882353, 0.486275, 1 )
+shader_param/dawn_color = Color( 1, 0.517647, 0.0470588, 1 )
+
+[sub_resource type="SphereShape" id=5]
+
+[sub_resource type="SphereMesh" id=6]
+
+[node name="world_environment" type="WorldEnvironment"]
+environment = SubResource( 1 )
+
+[node name="Root" type="Spatial" parent="."]
+script = ExtResource( 3 )
+GRAVITY_SCALE = -20.0
+SUN_DAY_COLOR = Color( 1, 0.972549, 0.882353, 1 )
+SUN_DAWN_COLOR = Color( 0.933594, 0.295395, 0.759086, 1 )
+ui_resource = "res://scene/UI/UI_play.tscn"
+cursor_resource = "res://scene/editor/Cursor.tscn"
+player_resource = "res://scene/person/GyMan.tscn"
+
+[node name="particles" type="Spatial" parent="Root"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1018.63, 0 )
+
+[node name="cpu_particles" type="CPUParticles" parent="Root/particles"]
+mesh = SubResource( 10 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 20.0
+initial_velocity_random = 0.67
+
+[node name="spatial" parent="Root/particles" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 84.8247 )
+
+[node name="directional_light" type="DirectionalLight" parent="Root"]
+directional_shadow_mode = 0
+
+[node name="sky" type="MeshInstance" parent="Root"]
+transform = Transform( 2000, 0, 0, 0, 2000, 0, 0, 0, 2000, 0, 0, 0 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = SubResource( 4 )
+
+[node name="Camera" parent="Root" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.934173, 0.35682, 0, -0.35682, 0.934173, -2.94275, 1027.15, 108.283 )
+
+[node name="Core" type="StaticBody" parent="Root"]
+transform = Transform( 1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0 )
+collision_mask = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Root/Core"]
+shape = SubResource( 5 )
+
+[node name="SphereCap" type="MeshInstance" parent="Root/Core"]
+mesh = SubResource( 6 )
+material/0 = ExtResource( 2 )
+
+[node name="content" type="Spatial" parent="Root"]
+
+[node name="edit_root01" type="Spatial" parent="Root/content"]
+transform = Transform( 1, 3.72529e-09, 0, -1.86265e-09, 0.988601, -0.15056, 0, 0.15056, 0.988601, 1.90735e-06, 977.772, 148.911 )
+
+[node name="static block296" parent="Root/content/edit_root01" instance=ExtResource( 6 )]
+transform = Transform( 1.36429, 0.791845, 0.770392, -10.8115, 0.0987842, -8.20624, -2.34676, 0.00524423, 38.2539, -56.3466, 15.9543, 141.21 )
+
+[node name="static block396" parent="Root/content/edit_root01" instance=ExtResource( 5 )]
+transform = Transform( 18.5616, -0.0564919, 1.54492, 1.3309, 0.993192, -0.959692, -2.68252, 0.101864, 10.2139, -59.2726, 53.0325, 106.878 )
+
+[node name="grab_bar" parent="Root/content/edit_root01" instance=ExtResource( 11 )]
+transform = Transform( 0.997175, -0.0728378, -0.0183815, 0.0705597, 0.992118, -0.103547, 0.0257787, 0.101957, 0.994454, -75.1396, 34.4252, 105.179 )
+
+[node name="grab_bar2" parent="Root/content/edit_root01" instance=ExtResource( 11 )]
+transform = Transform( 0.997175, -0.0728378, -0.0183815, 0.0705597, 0.992118, -0.103547, 0.0257787, 0.101957, 0.994454, -68.2412, 23.7294, 108.01 )
+
+[node name="grab_bar3" parent="Root/content/edit_root01" instance=ExtResource( 11 )]
+transform = Transform( 0.997174, -0.0728378, -0.0183815, 0.0705597, 0.992117, -0.103547, 0.0257787, 0.101957, 0.994454, -68.2412, 42.4042, 105.166 )
+
+[node name="static block297" parent="Root/content/edit_root01" instance=ExtResource( 6 )]
+transform = Transform( 0.996497, -2.91154, 0.072762, 0.0836313, 34.6912, -0.868939, 1.9446e-05, 3.61132, 8.40589, -86.7163, 44.1832, 107.558 )
+
+[node name="static block_396" parent="Root/content/edit_root01" instance=ExtResource( 5 )]
+transform = Transform( 18.7689, -0.0587188, -0.0647217, 1.08717, 0.99347, -1.02029, 0.225105, 0.0978137, 10.324, -59.2987, 14.2357, 98.7795 )
+
+[node name="static block_198" type="Spatial" parent="Root/content/edit_root01"]
+transform = Transform( 9.72716, -0.0759146, 0.161338, 0.765987, 0.967262, -1.94447, -0.0102237, 0.24216, 7.81739, -29.2841, 19.2664, 101.423 )
+
+[node name="static block_100" type="Spatial" parent="Root/content/edit_root01"]
+transform = Transform( 8.52087, -0.0759146, 0.161338, 0.670995, 0.967262, -1.94447, -0.00895596, 0.24216, 7.81739, -34.728, 16.0293, 103.843 )
+
+[node name="static block" parent="Root/content/edit_root01" instance=ExtResource( 6 )]
+transform = Transform( 8.52087, -0.0759146, 0.161338, 0.670995, 0.967262, -1.94447, -0.00895596, 0.24216, 7.81739, -40.7874, 8.65833, 120.886 )
+
+[node name="edit_root02" type="Spatial" parent="Root/content"]
+
+[node name="box643" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( -7.14315, 0.270654, 83.9253, 5.06652, 0.951618, -18.5286, -19.8491, 0.145501, -34.9319, -128.845, 971.397, 350.361 )
+
+[node name="box570" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( 0.486335, -15.8569, 46.1935, 17.3426, 22.9766, 25.6098, -35.5764, 10.9837, 13.1156, -548.593, 794.911, 379.999 )
+
+[node name="box407" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( 29.6013, -0.349391, 133.754, 62.2053, 0.851522, 30.2789, -109.035, 0.390944, 53.5861, -373.076, 909.244, 417.445 )
+
+[node name="cylinder334" parent="Root/content/edit_root02" instance=ExtResource( 4 )]
+transform = Transform( -12.2579, -0.692828, 36.1206, 20.2932, 0.579977, 38.0137, -47.2861, 0.428504, 6.95034, -712.792, 596.689, 440.852 )
+
+[node name="box261" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( -9.4105, -0.590505, 52.651, 5.60031, 0.67891, 51.9274, -21.4494, 0.436332, -9.54163, -607.549, 698.506, 448.926 )
+
+[node name="box206" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( 18.2149, -0.0360087, 33.1233, 10.4101, 0.991189, 0.176605, -75.8018, 0.12747, 7.98364, -36.2735, 998.476, 128.408 )
+
+[node name="cylinder" parent="Root/content/edit_root02" instance=ExtResource( 4 )]
+transform = Transform( 14.7321, 0.0849218, 57.7071, 9.89016, 0.977841, -7.66626, -57.0794, 0.191349, 13.5658, 85.4092, 983.459, 192.449 )
+
+[node name="box79" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( -14.5247, 0.25722, 49.5614, 9.03385, 0.952387, -8.7668, -29.7361, 0.163696, -26.8718, 258.303, 956.395, 164.385 )
+
+[node name="box" parent="Root/content/edit_root02" instance=ExtResource( 12 )]
+transform = Transform( 2.49184, 0.426316, 37.4321, 0.413133, 0.898109, -18.5434, -13.2773, 0.107955, 6.44815, 414.249, 909.027, 78.5889 )
+
+[node name="ground" type="Spatial" parent="Root/content"]
+transform = Transform( 0.366768, -0.93029, -0.00653621, 0.692057, 0.277526, -0.666361, 0.621722, 0.239876, 0.745601, -949.686, 283.313, 244.878 )
+
+[node name="box" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( 29.5672, 0.169115, -0.201562, -5.07744, 0.984797, -1.17375, 1.3113e-05, 0.039698, 29.9763, 172.085, -18.7549, 40.3953 )
+
+[node name="box2" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( 4.0352, 0.00949588, -19.8971, -10.666, 0.963628, -0.356819, 38.34, 0.267078, 1.99485, 339.813, -57.4165, 134.863 )
+
+[node name="box3" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( 74.9987, 0.347768, -0.535882, -27.842, 0.936789, -1.44355, 2.14577e-05, 0.0384956, 39.9703, 361.478, -47.1273, 40.0132 )
+
+[node name="box4" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( -0.909828, 16.4884, -2.39355, 0.405369, 36.3007, 5.48961, 0.0888197, 3.22381, -49.5725, 442.802, -45.9749, 86.5769 )
+
+[node name="box5" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( -0.937583, 8.95792, -4.99716, 0.336541, 25.3194, -0.973422, 0.0876079, -1.39545, -49.7402, 353.392, -21.9899, -55.0511 )
+
+[node name="box6" parent="Root/content/ground" instance=ExtResource( 5 )]
+transform = Transform( -0.931559, 9.17558, -6.28275, 0.351798, 25.0945, -3.72666, 0.0918191, -3.05611, -49.4635, 362.003, -37.1417, -96.2632 )
+
+[node name="brick" parent="Root/content/ground" instance=ExtResource( 6 )]
+transform = Transform( 0.936155, 14.0364, -1.09148, -0.350313, 37.4497, 1.34974, 0.0299111, -0.704946, 49.9698, 373.658, -21.7621, 6.37091 )
+
+[node name="paving" parent="Root/content/ground" instance=ExtResource( 7 )]
+transform = Transform( 19.3266, 0.256349, -0.441422, -5.10731, 0.966034, 0.791562, 0.629359, -0.032609, 19.9794, 265.909, -18.7863, -33.8253 )
+
+[node name="rock" parent="Root/content/ground" instance=ExtResource( 8 )]
+transform = Transform( 9.75991, 3.25749, -0.167224, -2.17152, 14.642, 0.025954, 0.168874, 0.0164788, 9.99857, 221.493, -25.2604, 1.1203 )
+
+[node name="graas_cyl" parent="Root/content/ground" instance=ExtResource( 9 )]
+transform = Transform( 29.2713, 0.425974, 1.5368, -6.18595, 1.94382, -3.40413, -2.21864, 0.200305, 29.7666, 215.14, -39.1121, 101.165 )
+
+[node name="LeafTree" parent="Root/content/ground" instance=ExtResource( 10 )]
+transform = Transform( 10, 0, 1.78814e-06, -9.53674e-07, 10, 0, -4.76837e-07, 1.07288e-06, 10, 231.853, -5.92291, 23.6045 )
+
+[node name="grab_bar_01" parent="Root/content/ground" instance=ExtResource( 11 )]
+transform = Transform( 1, 2.98023e-08, 4.84288e-08, 0, 1, -3.72529e-08, -1.49012e-08, 1.71363e-07, 1, 229.333, -7.25305, 42.3952 )
+
+[node name="grab_bar_02" parent="Root/content/ground" instance=ExtResource( 11 )]
+transform = Transform( 1, 2.98023e-08, 4.84288e-08, 0, 1, -3.72529e-08, -1.49012e-08, 1.71363e-07, 1, 214.847, -2.45294, 42.3953 )
+
+[node name="VCity" type="Spatial" parent="Root/content"]
+transform = Transform( 0.871526, 0.490349, -1.49012e-08, -0.48804, 0.867423, -0.0969204, -0.0475248, 0.0844687, 0.995292, 492.247, 870.785, 84.7955 )
+
+[node name="grab_bar_03" parent="Root/content/VCity" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5349, 19.6315, 2 )
+
+[node name="grab_bar_04" parent="Root/content/VCity" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.0517, 12.4065, 2 )
+
+[node name="grab_bar_05" parent="Root/content/VCity" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.2828, 3.61853, 2 )
+
+[node name="static block" parent="Root/content/VCity" instance=ExtResource( 7 )]
+transform = Transform( 5.41042, 0, 1.19209e-07, 0, 15.0269, 0, -1.19209e-07, 0, 5.41042, 0, 8.00256, 0 )
+
+[node name="static block2" parent="Root/content/VCity" instance=ExtResource( 7 )]
+transform = Transform( 21.7795, 0, 2.38419e-07, 0, 2.07684, 0, -2.38419e-07, 0, 21.7795, 0, 24.3365, 0 )
+
+[node name="static block5" parent="Root/content/VCity" instance=ExtResource( 7 )]
+transform = Transform( 21.7795, 0, 2.38419e-07, 0, 2.07684, 0, -2.38419e-07, 0, 21.7795, 0, 24.3365, 0 )
+
+[node name="static block4" parent="Root/content/VCity" instance=ExtResource( 7 )]
+transform = Transform( 21.7795, 0, 2.38419e-07, 0, 2.24556, 0, -2.38419e-07, 0, 21.7795, 20.3508, 39.7035, -18.7646 )
+
+[node name="test" type="Spatial" parent="Root/content"]
+transform = Transform( 1, -1.86265e-09, 0, 9.31323e-10, 0.998467, 0.0553489, 0, -0.0553489, 0.998467, -9.53674e-07, 1016.62, -56.3551 )
+
+[node name="static block3" parent="Root/content/test" instance=ExtResource( 7 )]
+transform = Transform( 60, -9.31323e-10, -3.8147e-06, 1.19209e-07, 1, 0.0461341, 3.8147e-06, -0.000768847, 60, 2.86102e-06, -13.9297, -0.77221 )
+
+[node name="static block4" parent="Root/content/test" instance=ExtResource( 7 )]
+transform = Transform( 32.0153, 1.49012e-07, 3.57628e-07, 0, 50, 1.70432e-07, 1.43051e-06, -6.18398e-07, 8.38699, 0, 27.9584, -0.66752 )
+
+[node name="NPC" parent="Root/content/test" instance=ExtResource( 15 )]
+
+[node name="trigger" type="Spatial" parent="Root/content"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.7683, 1016.95, 71.1111 )
+
+[node name="area" parent="Root/content/trigger" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6164 )

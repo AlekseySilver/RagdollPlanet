@@ -1,0 +1,251 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://texture/UIico.dds" type="Texture" id=1]
+[ext_resource path="res://script/control/gamepad/AGamepadEdit.cs" type="Script" id=2]
+[ext_resource path="res://script/control/gamepad/AActionControlCustom.cs" type="Script" id=3]
+
+[node name="edit_touch_gamepad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+joystick_ = NodePath("joystick")
+jump_button_ = NodePath("buttonA")
+kick_button_ = NodePath("buttonB")
+start_button_ = NodePath("button_start")
+select_button_ = NodePath("button_select")
+MU_button_ = NodePath("buttonMU")
+MD_button_ = NodePath("buttonMD")
+cam_control_ = NodePath("camera")
+
+[node name="camera" type="ColorRect" parent="."]
+anchor_left = 0.12
+anchor_top = 0.19
+anchor_right = 0.88
+anchor_bottom = 0.8
+color = Color( 0.239216, 0.239216, 0.239216, 0.709804 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "cam_control_region"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="button_start" type="Control" parent="."]
+anchor_left = 0.49707
+anchor_top = 0.835
+anchor_right = 0.558594
+anchor_bottom = 0.928333
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="button_start"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[node name="buttonA" type="Control" parent="."]
+anchor_left = 0.885742
+anchor_top = 0.698333
+anchor_right = 0.950195
+anchor_bottom = 0.791667
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonA"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 128, 128, 128 )
+
+[node name="button_select" type="Control" parent="."]
+anchor_left = 0.416016
+anchor_top = 0.835
+anchor_right = 0.480469
+anchor_bottom = 0.928333
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="button_select"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="buttonB" type="Control" parent="."]
+anchor_left = 0.796875
+anchor_top = 0.816667
+anchor_right = 0.860352
+anchor_bottom = 0.908333
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonB"]
+position = Vector2( 32.452, 25.23 )
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 256, 128, 128 )
+
+[node name="buttonMU" type="Control" parent="."]
+anchor_left = 0.0332031
+anchor_top = 0.478333
+anchor_right = 0.0972031
+anchor_bottom = 0.573333
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonMU"]
+position = Vector2( 32.452, 25.23 )
+rotation = 1.5708
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="buttonMD" type="Control" parent="."]
+anchor_left = 0.0332031
+anchor_top = 0.586667
+anchor_right = 0.0947266
+anchor_bottom = 0.685
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="_" type="Sprite" parent="buttonMD"]
+position = Vector2( 32.452, 25.23 )
+rotation = -1.5708
+scale = Vector2( 0.394219, 0.394219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 128, 128 )
+
+[node name="joystick" type="Control" parent="."]
+anchor_left = 0.0263672
+anchor_top = 0.766667
+anchor_right = 0.133789
+anchor_bottom = 0.955
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="spr_action_0" type="Sprite" parent="joystick"]
+position = Vector2( 50.54, 52.78 )
+scale = Vector2( 0.789688, 0.789688 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 128, 128, 128 )
+
+[node name="spr_action_round" type="Sprite" parent="joystick"]
+position = Vector2( 50.54, 52.78 )
+scale = Vector2( 0.789688, 0.789688 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 128, 128, 128 )
+
+[node name="btn_back" type="Button" parent="."]
+anchor_right = 0.1
+anchor_bottom = 0.1
+text = "<-"
+
+[node name="btn_back2" type="Button" parent="."]
+anchor_left = 0.775
+anchor_right = 1.0
+anchor_bottom = 0.1
+text = "default"
+
+[node name="transparency" type="Control" parent="."]
+anchor_left = 0.177
+anchor_top = 0.007
+anchor_right = 0.686
+anchor_bottom = 0.087
+margin_left = -0.248001
+margin_top = -0.2
+margin_right = -0.46405
+margin_bottom = -0.200005
+
+[node name="label" type="Label" parent="transparency"]
+anchor_right = 1.0
+anchor_bottom = 0.45
+margin_right = 1.0
+margin_bottom = -1.6
+text = "transparency"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="h_slider" type="HSlider" parent="transparency"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = -1.0
+margin_right = -2.0
+margin_bottom = 2.0
+value = 50.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cam_speed" type="Control" parent="."]
+anchor_left = 0.177
+anchor_top = 0.11
+anchor_right = 0.686
+anchor_bottom = 0.175
+margin_left = -0.248001
+margin_right = -2.46405
+margin_bottom = 0.999992
+
+[node name="label" type="Label" parent="cam_speed"]
+anchor_right = 1.0
+anchor_bottom = 0.45
+margin_right = 1.0
+margin_bottom = -1.6
+text = "camera speed"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="h_slider" type="HSlider" parent="cam_speed"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = -1.0
+margin_right = -2.0
+margin_bottom = 2.0
+value = 50.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="btn_back2" to="." method="_on_btn_default_pressed"]
+[connection signal="value_changed" from="transparency/h_slider" to="." method="_on_h_slider_value_changed"]

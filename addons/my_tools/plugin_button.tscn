@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/my_tools/plugin_button.gd" type="Script" id=1]
+
+[node name="Menu" type="MenuButton"]
+shortcut_in_tooltip = false
+text = "My Tools"
+script = ExtResource( 1 )

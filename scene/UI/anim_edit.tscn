@@ -1,0 +1,375 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/UI/item_scroll.tscn" type="PackedScene" id=1]
+[ext_resource path="res://script/UI/AUIAnimEdit.cs" type="Script" id=2]
+
+[node name="anim_edit" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keys" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.599
+anchor_top = 0.013
+anchor_right = 0.99
+anchor_bottom = 0.985
+margin_left = -0.376038
+margin_top = 0.2
+margin_right = 0.23999
+label = "keys"
+
+[node name="tree" type="Tree" parent="."]
+modulate = Color( 1, 1, 1, 0.643137 )
+anchor_top = 0.133667
+anchor_right = 0.201
+anchor_bottom = 0.988
+margin_top = -0.200001
+margin_right = 0.175995
+margin_bottom = 0.200012
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_interpolate_bone" type="Button" parent="."]
+anchor_left = 0.389377
+anchor_top = 0.139298
+anchor_right = 0.475018
+anchor_bottom = 0.194298
+margin_left = -0.355499
+margin_top = 0.0948715
+margin_right = -0.0515137
+margin_bottom = 0.0948639
+text = "ip bone"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_add_set" type="Button" parent="."]
+anchor_left = 0.390001
+anchor_top = 0.028
+anchor_right = 0.445001
+anchor_bottom = 0.078
+margin_left = -0.270782
+margin_top = -3.09959
+margin_right = 0.409241
+margin_bottom = -0.0995903
+text = "+ set"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_add_key" type="Button" parent="."]
+anchor_left = 0.387089
+anchor_top = 0.0848707
+anchor_right = 0.448089
+anchor_bottom = 0.139871
+margin_left = 0.375977
+margin_top = 0.199999
+margin_right = -0.0880127
+margin_bottom = 0.200001
+text = "+ key"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_import" type="Button" parent="."]
+anchor_left = 0.508721
+anchor_top = 0.0197604
+anchor_right = 0.574674
+anchor_bottom = 0.0777604
+margin_left = -0.288025
+margin_top = 0.199997
+margin_right = 0.175964
+margin_bottom = -0.600006
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "import"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_read_key" type="Button" parent="."]
+anchor_left = 0.508721
+anchor_top = 0.0871081
+anchor_right = 0.574674
+anchor_bottom = 0.145108
+margin_left = -0.288025
+margin_top = 0.199997
+margin_right = 0.175964
+margin_bottom = -0.600006
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "read k"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_relax_L" type="Button" parent="."]
+anchor_left = 0.220545
+anchor_top = 0.130464
+anchor_right = 0.256248
+anchor_bottom = 0.174131
+margin_left = 0.171295
+margin_top = 0.0651398
+margin_right = -0.388702
+margin_bottom = -0.134865
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_relax_R" type="Button" parent="."]
+anchor_left = 0.297684
+anchor_top = 0.133239
+anchor_right = 0.328505
+anchor_bottom = 0.176906
+margin_left = 0.171295
+margin_top = 0.0651398
+margin_right = -0.388702
+margin_bottom = -0.134865
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_relax_U" type="Button" parent="."]
+anchor_left = 0.260261
+anchor_top = 0.0882248
+anchor_right = 0.293035
+anchor_bottom = 0.131891
+margin_left = 0.171295
+margin_top = 0.0651398
+margin_right = -0.388702
+margin_bottom = -0.134865
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_relax_D" type="Button" parent="."]
+anchor_left = 0.262855
+anchor_top = 0.177704
+anchor_right = 0.292699
+anchor_bottom = 0.221371
+margin_left = 0.171295
+margin_top = 0.0651398
+margin_right = -0.388702
+margin_bottom = -0.134865
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_relax" type="Button" parent="."]
+anchor_left = 0.262855
+anchor_top = 0.13321
+anchor_right = 0.292699
+anchor_bottom = 0.176877
+margin_left = 0.171295
+margin_top = 0.0651398
+margin_right = -0.388702
+margin_bottom = -0.134865
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "rx"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_rem_set" type="Button" parent="."]
+anchor_left = 0.448413
+anchor_top = 0.0232405
+anchor_right = 0.499413
+anchor_bottom = 0.0782405
+margin_left = -0.11203
+margin_top = -3.8147e-06
+margin_right = -0.335999
+margin_bottom = -7.62939e-06
+text = "- set"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="name" type="LineEdit" parent="."]
+anchor_left = 0.217
+anchor_top = 0.027
+anchor_right = 0.378
+anchor_bottom = 0.082
+margin_left = -0.208008
+margin_top = -0.200001
+margin_right = -0.0720215
+margin_bottom = -0.200001
+text = "noname"
+clear_button_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_play" type="Button" parent="."]
+anchor_left = 0.227055
+anchor_top = 0.8772
+anchor_right = 0.315055
+anchor_bottom = 0.9322
+margin_left = -0.00834656
+margin_top = -0.052124
+margin_right = -0.120361
+margin_bottom = -0.0521851
+rect_pivot_offset = Vector2( 0, 173.163 )
+text = "play"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="total_time" type="SpinBox" parent="."]
+anchor_left = 0.496
+anchor_top = 0.926
+anchor_right = 0.58
+anchor_bottom = 0.976
+margin_left = -0.156342
+margin_top = 0.0247192
+margin_right = -0.172363
+margin_bottom = 0.0247192
+step = 0.01
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="current_time" type="SpinBox" parent="."]
+anchor_left = 0.497
+anchor_top = 0.865
+anchor_right = 0.581
+anchor_bottom = 0.915
+margin_left = 0.0796814
+margin_top = 0.0872192
+margin_right = 0.0636597
+margin_bottom = 0.0872803
+step = 0.01
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="overdrive" type="SpinBox" parent="."]
+anchor_left = 0.228468
+anchor_top = 0.818281
+anchor_right = 0.312468
+anchor_bottom = 0.868281
+margin_left = 0.0796814
+margin_top = 0.0872192
+margin_right = 0.0636597
+margin_bottom = 0.0872803
+min_value = -100.0
+step = 0.01
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="current_slider" type="HSlider" parent="."]
+anchor_left = 0.215
+anchor_top = 0.943
+anchor_right = 0.484
+anchor_bottom = 0.98
+margin_left = -0.160004
+margin_top = 0.200012
+margin_right = 0.383972
+margin_bottom = 6.0
+step = 0.01
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chk_loop" type="CheckButton" parent="."]
+anchor_left = 0.407
+anchor_top = 0.867
+anchor_right = 0.481
+anchor_bottom = 0.934
+margin_left = 0.265686
+margin_top = 0.147034
+margin_right = 0.489655
+margin_bottom = -0.0529785
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_finish" type="Button" parent="."]
+anchor_left = 0.00532813
+anchor_top = 0.0146667
+anchor_right = 0.0682422
+anchor_bottom = 0.0586667
+margin_left = -0.456001
+margin_top = 0.2
+margin_right = 0.119995
+margin_bottom = -0.200001
+text = "finish"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_interpolate_anim" type="Button" parent="."]
+anchor_left = 0.0196672
+anchor_top = 0.0725097
+anchor_right = 0.171448
+anchor_bottom = 0.11651
+margin_left = -0.456001
+margin_top = 0.2
+margin_right = 0.119995
+margin_bottom = -0.200001
+text = "interpolate anim"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_save" type="Button" parent="."]
+anchor_left = 0.0756406
+anchor_top = 0.013
+anchor_right = 0.129766
+anchor_bottom = 0.057
+margin_left = -0.456001
+margin_top = 0.2
+margin_right = 0.119995
+margin_bottom = -0.200001
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_load" type="Button" parent="."]
+anchor_left = 0.140818
+anchor_top = 0.0152247
+anchor_right = 0.194943
+anchor_bottom = 0.0592247
+margin_left = -0.456001
+margin_top = 0.2
+margin_right = 0.119995
+margin_bottom = -0.200001
+text = "load"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="item_selected" from="tree" to="." method="_on_tree_item_selected"]
+[connection signal="pressed" from="btn_interpolate_bone" to="." method="_on_btn_interpolate_bone_pressed"]
+[connection signal="pressed" from="btn_add_set" to="." method="_on_btn_add_set_pressed"]
+[connection signal="pressed" from="btn_add_key" to="." method="_on_btn_add_key_pressed"]
+[connection signal="pressed" from="btn_import" to="." method="_on_btn_import_pressed"]
+[connection signal="pressed" from="btn_read_key" to="." method="_on_btn_read_key_pressed"]
+[connection signal="pressed" from="btn_relax_L" to="." method="_on_btn_relax_L_pressed"]
+[connection signal="pressed" from="btn_relax_R" to="." method="_on_btn_relax_R_pressed"]
+[connection signal="pressed" from="btn_relax_U" to="." method="_on_btn_relax_U_pressed"]
+[connection signal="pressed" from="btn_relax_D" to="." method="_on_btn_relax_D_pressed"]
+[connection signal="pressed" from="btn_relax" to="." method="_on_btn_relax_pressed"]
+[connection signal="pressed" from="btn_rem_set" to="." method="_on_btn_rem_set_pressed"]
+[connection signal="text_changed" from="name" to="." method="_on_name_text_changed"]
+[connection signal="pressed" from="btn_play" to="." method="_on_btn_play_pressed"]
+[connection signal="value_changed" from="total_time" to="." method="_on_total_time_value_changed"]
+[connection signal="value_changed" from="current_time" to="." method="_on_current_time_value_changed"]
+[connection signal="value_changed" from="overdrive" to="." method="_on_overdrive_value_changed"]
+[connection signal="value_changed" from="current_slider" to="." method="_on_current_slider_value_changed"]
+[connection signal="toggled" from="chk_loop" to="." method="_on_chk_loop_toggled"]
+[connection signal="pressed" from="btn_finish" to="." method="_on_btn_finish_pressed"]
+[connection signal="pressed" from="btn_interpolate_anim" to="." method="_on_btn_interpolate_anim_pressed"]
+[connection signal="pressed" from="btn_save" to="." method="_on_btn_save_pressed"]
+[connection signal="pressed" from="btn_load" to="." method="_on_btn_load_pressed"]

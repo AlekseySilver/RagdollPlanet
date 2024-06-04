@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://texture/waterfall.dds" type="Texture" id=1]
+[ext_resource path="res://texture/WaterNoise.dds" type="Texture" id=2]
+[ext_resource path="res://shader/waterfall2.shader" type="Shader" id=3]
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=45]
+
+[sub_resource type="OpenSimplexNoise" id=445]
+
+[sub_resource type="NoiseTexture" id=446]
+seamless = true
+noise = SubResource( 445 )
+
+[sub_resource type="ShaderMaterial" id=447]
+shader = ExtResource( 3 )
+shader_param/albedo = Color( 0.494118, 0.556863, 0.952941, 1 )
+shader_param/albedo2 = Color( 0.0666667, 0.631373, 0.933333, 1 )
+shader_param/specular = 0.0
+shader_param/metallic = 0.0
+shader_param/roughness = 1.0
+shader_param/normal_scale = 1.0
+shader_param/uv1_scale = Vector3( 0.001, 0.001, 1 )
+shader_param/fall_speed = 0.019
+shader_param/light_color = Color( 0.541176, 0.607843, 0.952941, 1 )
+shader_param/dark_color = Color( 0.298039, 0.345098, 0.960784, 1 )
+shader_param/displ_amount = 0.099
+shader_param/speed = 0.1
+shader_param/texture_albedo = ExtResource( 1 )
+shader_param/texture_normal = ExtResource( 2 )
+shader_param/texture_noise = SubResource( 446 )
+
+[sub_resource type="ArrayMesh" id=448]
+surfaces/0 = {
+"aabb": AABB( -2.9618, -572.2, -79.9655, 402.081, 572.703, 443.665 ),
+"array_data": PoolByteArray( 28, 187, 210, 63, 64, 206, 0, 63, 27, 238, 159, 66, 51, 21, 218, 107, 0, 0, 0, 0, 0, 0, 0, 0, 14, 142, 61, 192, 64, 206, 0, 191, 83, 238, 159, 194, 65, 27, 219, 107, 0, 0, 0, 60, 0, 0, 0, 0, 179, 98, 187, 66, 161, 96, 92, 195, 132, 102, 207, 65, 46, 37, 200, 98, 0, 60, 0, 0, 136, 91, 0, 0, 53, 255, 180, 66, 95, 25, 94, 195, 193, 4, 148, 194, 38, 43, 189, 92, 0, 60, 0, 60, 136, 91, 0, 0, 179, 98, 187, 66, 161, 96, 92, 195, 132, 102, 207, 65, 46, 37, 200, 98, 0, 0, 0, 0, 136, 91, 0, 0, 53, 255, 180, 66, 95, 25, 94, 195, 193, 4, 148, 194, 38, 43, 189, 92, 0, 0, 0, 60, 136, 91, 0, 0, 101, 211, 215, 66, 158, 180, 100, 195, 50, 224, 13, 66, 16, 64, 174, 110, 0, 60, 0, 0, 212, 92, 0, 0, 14, 12, 73, 67, 98, 47, 116, 195, 194, 103, 26, 194, 10, 68, 171, 109, 0, 60, 0, 60, 212, 92, 0, 0, 101, 211, 215, 66, 158, 180, 100, 195, 50, 224, 13, 66, 16, 64, 174, 110, 0, 0, 0, 0, 212, 92, 0, 0, 14, 12, 73, 67, 98, 47, 116, 195, 194, 103, 26, 194, 10, 68, 171, 109, 0, 0, 0, 60, 212, 92, 0, 0, 197, 252, 215, 66, 98, 128, 99, 195, 250, 85, 70, 66, 9, 68, 180, 123, 0, 60, 0, 0, 121, 93, 0, 0, 254, 208, 76, 67, 238, 175, 114, 195, 44, 181, 237, 65, 10, 67, 181, 123, 0, 60, 0, 60, 121, 93, 0, 0, 197, 252, 215, 66, 98, 128, 99, 195, 250, 85, 70, 66, 9, 68, 180, 123, 0, 0, 0, 0, 121, 93, 0, 0, 254, 208, 76, 67, 238, 175, 114, 195, 44, 181, 237, 65, 10, 67, 181, 123, 0, 0, 0, 60, 121, 93, 0, 0, 184, 138, 85, 66, 48, 207, 93, 195, 9, 50, 70, 67, 8, 54, 64, 122, 0, 60, 0, 0, 248, 95, 0, 0, 202, 178, 83, 67, 16, 240, 116, 195, 163, 191, 68, 67, 16, 43, 57, 122, 0, 60, 0, 60, 248, 95, 0, 0, 184, 138, 85, 66, 48, 207, 93, 195, 9, 50, 70, 67, 8, 54, 64, 122, 0, 0, 0, 0, 248, 95, 0, 0, 202, 178, 83, 67, 16, 240, 116, 195, 163, 191, 68, 67, 16, 43, 57, 122, 0, 0, 0, 60, 248, 95, 0, 0, 127, 81, 18, 67, 223, 188, 220, 195, 124, 217, 181, 67, 24, 32, 204, 113, 0, 60, 0, 0, 227, 97, 0, 0, 233, 244, 123, 67, 97, 203, 221, 195, 124, 140, 115, 67, 35, 32, 205, 113, 0, 60, 0, 60, 227, 97, 0, 0, 127, 81, 18, 67, 223, 188, 220, 195, 124, 217, 181, 67, 24, 32, 204, 113, 0, 0, 0, 0, 227, 97, 0, 0, 233, 244, 123, 67, 97, 203, 221, 195, 124, 140, 115, 67, 35, 32, 205, 113, 0, 0, 0, 60, 227, 97, 0, 0, 77, 143, 199, 67, 207, 12, 15, 196, 64, 16, 154, 67, 36, 47, 186, 77, 0, 60, 0, 0, 158, 99, 0, 0, 197, 158, 176, 67, 89, 148, 6, 196, 33, 163, 30, 67, 35, 39, 185, 77, 0, 60, 0, 60, 158, 99, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 6, 0, 6, 0, 5, 0, 7, 0, 8, 0, 9, 0, 10, 0, 10, 0, 9, 0, 11, 0, 12, 0, 13, 0, 14, 0, 14, 0, 13, 0, 15, 0, 16, 0, 17, 0, 18, 0, 18, 0, 17, 0, 19, 0, 20, 0, 21, 0, 22, 0, 22, 0, 21, 0, 23, 0 ),
+"blend_shape_data": [  ],
+"format": 2194743,
+"index_count": 36,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="ConvexPolygonShape" id=449]
+points = PoolVector3Array( 1.64634, 0.503147, 79.965, -2.9618, -0.503147, -79.9655, 1.64634, -9.49685, 79.965, -2.9618, -10.5031, -79.9655, 93.6928, -220.377, 25.9251, 90.4985, -222.099, -74.0093, 93.6928, -230.377, 25.9251, 90.4985, -232.099, -74.0093 )
+
+[sub_resource type="ConvexPolygonShape" id=450]
+points = PoolVector3Array( 93.6928, -220.377, 25.9251, 90.4985, -222.099, -74.0093, 93.6928, -230.377, 25.9251, 90.4985, -232.099, -74.0093, 107.913, -228.706, 35.4689, 201.047, -244.185, -38.6013, 107.913, -238.706, 35.4689, 201.047, -254.185, -38.6013 )
+
+[sub_resource type="ConvexPolygonShape" id=451]
+points = PoolVector3Array( 107.913, -228.706, 35.4689, 201.047, -244.185, -38.6013, 107.913, -238.706, 35.4689, 201.047, -254.185, -38.6013, 107.994, -227.501, 49.584, 204.816, -242.687, 29.7135, 107.994, -237.501, 49.584, 204.816, -252.687, 29.7135 )
+
+[sub_resource type="ConvexPolygonShape" id=452]
+points = PoolVector3Array( 107.994, -227.501, 49.584, 204.816, -242.687, 29.7135, 107.994, -237.501, 49.584, 204.816, -252.687, 29.7135, 53.3855, -221.809, 198.195, 211.698, -244.938, 196.749, 53.3855, -231.809, 198.195, 211.698, -254.938, 196.749 )
+
+[sub_resource type="ConvexPolygonShape" id=453]
+points = PoolVector3Array( 53.3855, -221.809, 198.195, 211.698, -244.938, 196.749, 53.3855, -231.809, 198.195, 211.698, -254.938, 196.749, 146.318, -441.476, 363.699, 251.957, -443.589, 243.549, 146.318, -451.476, 363.699, 251.957, -453.589, 243.549 )
+
+[sub_resource type="ConvexPolygonShape" id=454]
+points = PoolVector3Array( 146.318, -441.476, 363.699, 251.957, -443.589, 243.549, 146.318, -451.476, 363.699, 251.957, -453.589, 243.549, 399.12, -572.2, 308.127, 353.24, -538.318, 158.637, 399.12, -582.2, 308.127, 353.24, -548.318, 158.637 )
+
+[node name="big_mountain" type="Spatial"]
+transform = Transform( -0.4431, 0.883681, 0.150895, -0.89646, -0.435911, -0.0796277, -0.00458867, -0.170555, 0.985338, 878.143, -433.176, -169.486 )
+
+[node name="loader" type="Node" parent="."]
+script = ExtResource( 45 )
+State = 1
+files = PoolStringArray( "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/var/cylinder_snow.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/var/box_snow.tscn", "res://scene/details/var/box_maple.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/details/waterfallB.tscn", "res://scene/island/parts/ground_mountain/ground_mountain000.tscn", "res://scene/island/parts/ground_mountain/ground_mountain001.tscn", "res://scene/island/parts/ground_mountain/ground_mountain002.tscn", "res://scene/island/parts/ground_mountain/ground_mountain003.tscn", "res://scene/island/parts/ground_mountain/ground_mountain004.tscn", "res://scene/island/parts/ground_mountain/ground_mountain005.tscn", "res://scene/island/parts/ground_mountain/ground_mountain006.tscn", "res://scene/island/parts/ground_mountain/ground_mountain007.tscn", "res://scene/island/parts/ground_mountain/ground_mountain008.tscn", "res://scene/island/parts/ground_mountain/ground_mountain009.tscn", "res://scene/island/parts/ground_mountain/ground_mountain010.tscn", "res://scene/island/parts/ground_mountain/ground_mountain011.tscn", "res://scene/island/parts/ground_mountain/ground_mountain012.tscn", "res://scene/island/parts/ground_mountain/ground_mountain013.tscn", "res://scene/island/parts/ground_mountain/ground_mountain014.tscn", "res://scene/island/parts/ground_mountain/ground_mountain015.tscn", "res://scene/island/parts/ground_mountain/ground_mountain016.tscn", "res://scene/island/parts/ground_mountain/ground_mountain017.tscn", "res://scene/island/parts/ground_mountain/ground_mountain018.tscn", "res://scene/island/parts/ground_mountain/ground_mountain019.tscn", "res://scene/island/parts/ground_mountain/ground_mountain020.tscn", "res://scene/island/parts/ground_mountain/ground_mountain021.tscn", "res://scene/island/parts/ground_mountain/ground_mountain022.tscn", "res://scene/island/parts/ground_mountain/ground_mountain023.tscn", "res://scene/island/parts/ground_mountain/ground_mountain024.tscn", "res://scene/island/parts/ground_mountain/ground_mountain025.tscn", "res://scene/island/parts/ground_mountain/ground_mountain026.tscn", "res://scene/island/parts/ground_mountain/ground_mountain027.tscn", "res://scene/island/parts/ground_mountain/ground_mountain028.tscn", "res://scene/island/parts/ground_mountain/ground_mountain029.tscn", "res://scene/island/parts/ground_mountain/ground_mountain030.tscn", "res://scene/island/parts/ground_mountain/ground_mountain031.tscn", "res://scene/island/parts/ground_mountain/ground_mountain032.tscn", "res://scene/island/parts/ground_mountain/ground_mountain033.tscn", "res://scene/island/parts/ground_mountain/ground_mountain034.tscn", "res://scene/island/parts/ground_mountain/ground_mountain035.tscn", "res://scene/island/parts/ground_mountain/ground_mountain036.tscn" )
+positions = PoolVector3Array( 389.468, 993.918, 62.9636, 281.752, 1010.96, -79.6125, -105.263, 559.073, -246.584, -18.0019, 691.019, -58.6596, 769.24, 383.834, -270.965, 655.374, 594.519, 204.08, 425.834, 682.607, 364.393, -55.2345, 537.051, -170.914, -11.6339, 554.731, -1.75458, -53.9185, 788.307, -224.646, -75.9539, 1141.82, -160.489, 98.1433, 293.42, -496.348, 299.073, 278.018, -454.629, 657.002, 428.682, -282.927, 662.693, 541.855, -94.9883, 600.161, 621.005, 70.3474, 296.224, 970.911, 5.93747, 583.489, 278.375, -442.024, 483.217, 319.386, -395.534, 10.8178, 1222.92, -3.91168, -284.095, 527.101, 182.009, -239.899, 675.727, 162.428, 73.1717, 706.312, 159.932, -10.1639, 520.122, 69.7862, -332.828, 353.328, -36.1096, -163.166, 407.258, -338.303, -558.581, -40.9052, -317.386, -404.618, 83.3512, -289.372, -302.851, 197.513, -389.307, -129.928, 280.938, -464.393, -510.335, -17.1323, -31.2983, 12.7086, -350.422, 760.349, 220.216, -132.152, 581.625, 15.4895, 1382.86, -54.405, -168.871, 913.246, -165.214, 134.993, 963.228, -174.073, 145.628, 1050.49, 142.1, -111.91, 1157.37, 186.171, -347.876, 863.64, 34.188, -348.095, 686.048, -141.71, -103.552, 842.336, 430.522, -364.059, 624.857, 258.967, -160.59, 428.57, 437.119, 182.736, 773.688, 390.01, 319.484, 713.638, 187.336, 821.524, 467.153, -26.2063, 699.655, 559.511, -52.9465, 600.984, 305.834, -350.395, 370.339, 117.855, -279.111, 445.865, 130.006, 14.403, 521.259, 100.283, 134.4, -325.796, 109.117, 292.793, -49.3856, 144.355, 485.824, 180.16, 269.261, 392.078, 336.374, 445.392, 344.391, 505.973, 213.909, 242.524, 580.065, 473.841, 273.603, 501.098, 612.646, 225.694, 487.168, 640.818, -118.701, 321.771, 439.297, -275.871, 273.313, 95.5182, -472.502, 16.8319, 212.955, -467.382, -137.631, 318.327, -242.476, -524.886, -109.971, -285.52, -239.988, 66.9792, -489.03, -307.822, 134.03, -307.424, -389.595, 205.004, -60.3141 )
+rotations = PoolVector3Array( -1.53225, -0.815995, 0.885906, -1.37916, 1.11865, 0.441571, -0.038876, -0.988671, 0.171484, 0.0693538, 0.260873, -0.0244633, -0.456064, 2.57475, -2.26906, -0.70891, 1.07698, -1.77153, -0.808914, 0.784157, -2.14443, -0.0170779, 0.00408722, 0.0226062, -0.0177966, 1.74252, 0.017863, -0.000210451, -1.39383, 1.57856, 0.195105, -1.36421, 1.14448, -0.114585, -0.0457417, 0.0142382, -0.290997, -0.34181, -0.0461633, -0.292421, -1.08873, 0.628776, -0.132558, -2.21074, 0.420064, -0.220018, -1.81613, 0.376154, 0.00824169, 0.0346339, -0.149451, 0.78423, 2.42603, -2.1518, -0.055842, -0.370085, 0.398166, -0.00170232, 0.0126755, -0.00490123, 0.113799, 0.0285694, 0.186714, 0.0312149, 1.34023, 0.0511261, -0.168585, 1.25664, 0.091661, 0.0707824, 0.235602, 0.0316474, 0.0298174, -0.226344, 0.242852, 0.00862115, -0.860518, 1.27884, 0.0332089, -0.422364, 0.625383, -0.208398, -0.166471, 0.5965, 0.155086, 0.815669, 0.677781, -0.050781, 0.288044, 0.104278, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906, 0.171393, -0.00465691, 2.02906 )
+scales = PoolVector3Array( 30.6769, 137.461, 30.6768, 30.6768, 109.89, 30.6766, 66.8342, 21.4905, 77.7015, 100.491, 20.1742, 138.893, 68.7622, 150.154, 68.7627, 68.7617, 150.153, 68.7619, 68.7615, 150.153, 68.7614, 154.517, 9.47, 154.517, 227.906, 0.760021, 82.1223, 227.904, 0.760018, 82.122, 145.469, 0.760014, 28.8388, 119.582, 0.76002, 57.7566, 119.583, 0.760019, 57.7564, 119.582, 0.760017, 57.7563, 119.581, 0.760013, 57.7558, 119.58, 0.760012, 57.7557, 80.5103, 14.7104, 169.587, 68.7626, 150.156, 68.763, 119.582, 0.760019, 57.7565, 147.217, 12.054, 129.326, 185.991, 14.7401, 185.991, 159.527, 20.1743, 212.58, 100.49, 20.1742, 138.892, 97.1149, 11.4702, 162.174, 111.933, 15.8901, 101.612, 148.999, 0.860019, 63.3672, 119.585, 0.760033, 57.7582, 119.585, 0.760031, 57.7578, 119.584, 0.760026, 57.7571, 119.583, 0.760023, 57.7567, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999, 1, 1, 0.999999 )
+
+[node name="area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.963, 1235.37, -17.9644 )
+
+[node name="mesh_instance" type="MeshInstance" parent="area"]
+transform = Transform( 1, 8.14907e-10, 2.32831e-09, -1.22236e-09, 1, -1.3411e-07, -6.51926e-09, -2.98023e-08, 1, 0.788406, 0.647461, -0.675964 )
+material_override = SubResource( 447 )
+mesh = SubResource( 448 )
+
+[node name="0" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( -2.30407, 0.0716108, 0.997015, -0.503147, 0.997398, -0.0718201, -79.9653, -0.00833823, -0.0282754, -0.65773, 0, -0.000213623 )
+
+[node name="1" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( -1.59716, 0.124873, 0.991658, -0.860826, 0.99195, -0.125464, -49.9672, -0.0210798, -0.0295362, 92.0956, -221.238, -24.0421 )
+
+[node name="2" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( 46.5671, 0.156194, 0.610938, -7.73977, 0.987674, -0.0886405, -37.0351, -0.0100123, 0.7867, 154.48, -236.445, -1.56619 )
+
+[node name="3" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( 48.4113, 0.15702, 0.19465, -7.59287, 0.987539, -0.0412706, -9.93525, 0.0104011, 0.980003, 156.405, -235.094, 39.6487 )
+
+[node name="4" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( 79.1565, 0.144784, -0.00384932, -11.5642, 0.985518, -0.0886588, -0.723435, 0.0882809, 0.996054, 132.542, -233.374, 197.472 )
+
+[node name="5" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( 52.8192, 0.195036, 0.725292, -1.05666, 0.96856, -0.24843, -60.0752, 0.154443, 0.642056, 199.138, -442.532, 303.624 )
+
+[node name="6" type="Spatial" parent="area/mesh_instance"]
+transform = Transform( -22.9396, 0.303087, 0.9088, 16.9411, 0.945222, -0.248419, -74.7449, 0.121218, -0.335219, 376.18, -555.259, 233.382 )
+
+[node name="5" type="CollisionShape" parent="area"]
+shape = SubResource( 449 )
+
+[node name="6" type="CollisionShape" parent="area"]
+shape = SubResource( 450 )
+
+[node name="7" type="CollisionShape" parent="area"]
+shape = SubResource( 451 )
+
+[node name="8" type="CollisionShape" parent="area"]
+shape = SubResource( 452 )
+
+[node name="9" type="CollisionShape" parent="area"]
+shape = SubResource( 453 )
+
+[node name="11" type="CollisionShape" parent="area"]
+shape = SubResource( 454 )

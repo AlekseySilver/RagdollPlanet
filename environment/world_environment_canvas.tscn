@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://environment/sky.tres" type="Environment" id=1]
+[ext_resource path="res://material/system/background_env.tres" type="Material" id=2]
+
+[node name="world_environment" type="WorldEnvironment"]
+environment = ExtResource( 1 )
+
+[node name="canvas_layer" type="CanvasLayer" parent="."]
+layer = -99
+
+[node name="control" type="Panel" parent="canvas_layer"]
+material = ExtResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="directional_light" type="DirectionalLight" parent="."]
+directional_shadow_mode = 0

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/scene/trigger/ATriggerDialog.cs" type="Script" id=1]
+
+[sub_resource type="SphereShape" id=11]
+radius = 5.0
+
+[sub_resource type="SphereMesh" id=12]
+
+[sub_resource type="SpatialMaterial" id=13]
+flags_transparent = true
+albedo_color = Color( 0.54902, 0.462745, 1, 0.462745 )
+
+[node name="area" type="Area"]
+collision_layer = 8
+collision_mask = 2
+monitorable = false
+script = ExtResource( 1 )
+dialog_name = "01"
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+shape = SubResource( 11 )
+
+[node name="debug_mesh" type="MeshInstance" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+visible = false
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[connection signal="body_entered" from="." to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_area_body_exited"]

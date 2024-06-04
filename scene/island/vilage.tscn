@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/scene/ANodeLoader.cs" type="Script" id=1]
+
+[node name="vilage" type="Spatial"]
+
+[node name="loader" type="Node" parent="."]
+script = ExtResource( 1 )
+files = PoolStringArray( "res://scene/details/var/box_pine.tscn", "res://scene/details/var/box_pine.tscn", "res://scene/details/var/cylinder_tree_bark.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/cylinder.tscn", "res://scene/details/grab_bar.tscn", "res://scene/details/var/box_maple.tscn", "res://scene/island/parts/ground_forest/ground_forest000.tscn", "res://scene/island/parts/ground_forest/ground_forest001.tscn", "res://scene/person/NPC/NPC_Kassia.tscn" )
+positions = PoolVector3Array( 32.0793, 10.6237, 24.9466, 3.88995, 13.9975, -21.1431, 20.4173, 24.9293, 69.3131, -38.9901, 3.10938, 16.4837, -39.0557, 2.48956, 35.4908, -39.3983, 7.94916, 26.1925, 142.16, -31.6121, 16.743, -186.715, -222.768, 542.764, -57.2576, -60.251, -18.7593, -15.7139, 9.6163, 55.2183 )
+rotations = PoolVector3Array( 0.0243055, 0.000628872, -0.0312004, -0.00493048, 1.15021, -0.0202705, 0.0665062, 0.0020894, -0.0194232, 0.036005, -0.00516876, 0.037358, 0.036005, -0.00516876, 0.037358, 0.0269094, -0.00700337, 0.0474658, 0.0222678, 0.0365879, -0.14263, 0.172666, -1.09268e-07, 1.16806, 0.172666, -1.09268e-07, 1.16806, 3.72529e-08, 0, 0 )
+scales = PoolVector3Array( 1.98388, 16.23, 35.2451, 1.52425, 16.2301, 30.8179, 3.72044, 29.79, 3.72045, 0.642284, 8.85, 0.642285, 0.642284, 8.85, 0.642285, 1, 1, 1.78644, 93.1922, 17.4201, 94.2321, 1, 1, 1, 1, 1, 1, 1, 1, 1 )

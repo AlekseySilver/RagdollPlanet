@@ -1,0 +1,16 @@
+[gd_resource type="Environment" format=2]
+
+[resource]
+background_sky_custom_fov = 20.0
+background_canvas_max_layer = -99
+ambient_light_color = Color( 0.686275, 0.686275, 0.686275, 1 )
+fog_color = Color( 0.372549, 0.419608, 0.470588, 1 )
+fog_depth_curve = 9.51365
+fog_transmit_enabled = true
+fog_transmit_curve = 2.82843
+fog_height_enabled = true
+fog_height_curve = 0.90125
+dof_blur_far_distance = 717.84
+dof_blur_far_transition = 40.31
+dof_blur_near_distance = 0.07
+glow_bicubic_upscale = true

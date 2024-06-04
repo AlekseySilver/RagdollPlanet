@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="HeightMapShape" id=1]
+margin = 1.0
+
+[node name="static_body" type="StaticBody"]
+transform = Transform( 19.1877, -0.192103, -4.13173, 4.56979, 0.958649, 3.39326, 3.30902, -0.209975, 19.2721, -104.322, -13.1066, -78.9296 )
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="mesh_instance" type="MeshInstance" parent="."]

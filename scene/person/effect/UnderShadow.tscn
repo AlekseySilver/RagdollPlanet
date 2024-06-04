@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/person/effect/AUnderShadow.cs" type="Script" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type spatial;
+render_mode blend_mix,depth_draw_opaque,cull_back,diffuse_burley,specular_schlick_ggx;
+uniform vec4 albedo : hint_color;
+uniform float size : hint_range(0,1);
+
+void fragment() {
+	vec2 uv = UV - 0.5;
+	
+	if (dot(uv, uv) > 0.25 * size)
+		discard;
+	
+	ALBEDO = albedo.rgb;
+	ALPHA = albedo.a;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/albedo = Color( 0.611765, 0.00784314, 0.00784314, 1 )
+shader_param/size = 1.0
+
+[node name="spatial" type="MeshInstance"]
+transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+script = ExtResource( 1 )

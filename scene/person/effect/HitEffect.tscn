@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://audio/sound/PlayerFistHit.wav" type="AudioStream" id=1]
+[ext_resource path="res://script/person/effect/AHitEffect.cs" type="Script" id=2]
+[ext_resource path="res://texture/sun_flare1.png" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+bake_resolution = 20
+_data = [ Vector2( 0, 0 ), 0.0, 12.4532, 0, 0, Vector2( 0.200647, 0.989224 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -4.40794, 0.0, 0, 0 ]
+
+[node name="hit_effect" type="Spatial"]
+script = ExtResource( 2 )
+GRAVITY_SCALE = 0.2
+
+[node name="cpu_particles" type="CPUParticles" parent="."]
+emitting = false
+amount = 15
+lifetime = 0.75
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+mesh = SubResource( 2 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.5
+scale_amount = 0.5
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 3 )
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

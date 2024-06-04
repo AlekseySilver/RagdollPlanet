@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/UI/FloatValue.gd" type="Script" id=1]
+
+[node name="control" type="ColorRect"]
+margin_right = 500.0
+margin_bottom = 100.0
+color = Color( 0.45098, 0.45098, 0.45098, 1 )
+script = ExtResource( 1 )
+range_max = 100.0
+
+[node name="label" type="Label" parent="."]
+anchor_right = 0.5
+anchor_bottom = 1.0
+
+[node name="edit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.8
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slider" type="HSlider" parent="."]
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[connection signal="text_changed" from="edit" to="." method="_on_line_edit_text_changed"]
+[connection signal="value_changed" from="slider" to="." method="_on_h_slider_value_changed"]
